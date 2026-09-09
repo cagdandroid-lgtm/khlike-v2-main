@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#6366f1">
+<title>KHLike — Oyun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common/base.css">
+<link rel="stylesheet" href="/student/style.css">
+</head>
+<body>
+
+<canvas class="ambiyans" id="ambiyans" aria-hidden="true"></canvas>
+
+<header class="ust katman">
+    <div class="ust-sol">
+        <span class="ust-etkinlik" id="ust-etkinlik">KHLike</span>
+        <span class="ust-ben gizli" id="ust-ben"></span>
+    </div>
+    <button class="ses-dug" id="ses-dug" type="button" aria-label="Sesi aç/kapat" title="Sesi aç/kapat">🔊</button>
+</header>
+
+<main class="katman" id="govde">
+
+    <!-- 1) Öğretmen henüz etkinliği açmadı -->
+    <section class="ekran orta" id="ek-bekleme">
+        <div class="buyuk-emoji" id="bekleme-emoji">🎈</div>
+        <h1>Öğretmenini bekle</h1>
+        <p class="alt">Etkinlik birazdan açılacak. Rahat ol, hazır olduğunda başlıyoruz!</p>
+        <div class="noktalar" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <!-- 2) Karma oturum: grup seçimi -->
+    <section class="ekran orta" id="ek-grup">
+        <h1>Grubunu seç</h1>
+        <p class="alt">Öğretmenin bugün karma oturum açtı.</p>
+        <div class="grup-liste" id="grup-liste"></div>
+    </section>
+
+    <!-- 3) İsim kartları -->
+    <section class="ekran" id="ek-isim">
+        <div class="orta bas-blok">
+            <h1 id="isim-baslik">Adına dokun</h1>
+            <p class="alt" id="isim-alt">Hazırsan başlıyoruz!</p>
+        </div>
+        <div class="isim-izgara" id="isim-izgara"></div>
+        <p class="dip-not" id="isim-bos"></p>
+        <div class="oyunda-blok gizli" id="oyunda-blok">
+            <h2 class="oyunda-bas">🎮 Şu an oyunda</h2>
+            <div class="isim-izgara" id="oyunda-izgara"></div>
+        </div>
+    </section>
+
+    <!-- 4) Katıldı, oyun başlamayı bekliyor -->
+    <section class="ekran orta" id="ek-lobi">
+        <div class="buyuk-emoji" id="lobi-emoji">🎮</div>
+        <h1 id="lobi-baslik">Oyundasın!</h1>
+        <p class="alt" id="lobi-slogan"></p>
+        <div class="lobi-sayac"><strong id="lobi-sayi">0</strong><span>oyuncu sahnede</span></div>
+        <p class="dip-not">Öğretmen başlattığında ilk soru ekranına gelecek.</p>
+    </section>
+
+    <!-- 5) Soru (arka plan animasyonu YOK) -->
+    <section class="ekran soru-ekran" id="ek-soru">
+        <div class="soru-ust">
+            <span class="soru-no" id="soru-no">1 / 10</span>
+            <div class="sure-cubuk"><i id="sure-dolgu"></i></div>
+            <span class="sure-sayi" id="sure-sayi">30</span>
+        </div>
+        <div class="mod-serit gizli" id="mod-soru"></div>
+        <div class="soru-govde">
+            <p class="soru-metin" id="soru-metin"></p>
+            <div class="soru-gorsel" id="soru-gorsel"></div>
+        </div>
+        <div class="sik-izgara" id="sik-izgara"></div>
+    </section>
+
+    <!-- 6) Cevap kilitlendi → bekleme mini oyunu -->
+    <section class="ekran kilit-ekran" id="ek-kilit">
+        <div class="kilit-bas">
+            <span class="kilit-onay">Kilitlendi ✓</span>
+            <span class="kilit-alt" id="kilit-alt">Arkadaşların cevaplarken oyalanabilirsin</span>
+        </div>
+        <div class="mini-kutu">
+            <div class="mini-bas">
+                <span id="mini-ad">Mini oyun</span>
+                <span class="mini-skor" id="mini-skor">0</span>
+            </div>
+            <div class="mini-alan" id="mini-alan"></div>
+            <p class="mini-not">Bu mini oyun puanını etkilemez 🙂</p>
+        </div>
+    </section>
+
+    <!-- 6b) Fetih aşaması (öğretmen açtığında) -->
+    <section class="ekran fetih-ekran" id="ek-fetih">
+        <div class="fetih-bas">
+            <h1 id="fetih-baslik">🗺️ Fetih zamanı!</h1>
+            <p class="alt" id="fetih-alt"></p>
+        </div>
+        <div class="fetih-izgara" id="fetih-izgara"></div>
+        <p class="fetih-not" id="fetih-not"></p>
+        <div class="fetih-liste" id="fetih-liste"></div>
+    </section>
+
+    <!-- 6c) Anlatım: öğretmen soruyu çözüyor (salt görüntü, cevap verilemez) -->
+    <section class="ekran anlat-ekran" id="ek-anlatim">
+        <div class="anlat-serit">
+            <span class="as-im" aria-hidden="true">📖</span>
+            <span>Öğretmenin soruyu anlatıyor</span>
+            <span class="as-no" id="anl-no"></span>
+        </div>
+        <div class="anlat-govde" id="anl-govde">
+            <div class="soru-govde">
+                <p class="soru-metin" id="anl-metin"></p>
+                <div class="soru-gorsel" id="anl-gorsel"></div>
+            </div>
+            <div class="sik-izgara anlat-sikler" id="anl-sikler"></div>
+            <p class="anlat-aciklama gizli" id="anl-aciklama"></p>
+        </div>
+        <p class="dip-not" id="anl-not">Şu an cevap veremezsin — birlikte bakıyoruz 👀</p>
+    </section>
+
+    <!-- 7) Kişisel sonuç -->
+    <section class="ekran sonuc-ekran" id="ek-sonuc">
+        <div class="sonuc-kart" id="sonuc-kart">
+            <div class="sonuc-emoji" id="sonuc-emoji">🎉</div>
+            <h1 class="sonuc-soz" id="sonuc-soz"></h1>
+            <div class="sonuc-puan"><span>+</span><strong id="sonuc-puan">0</strong><span>puan</span></div>
+            <div class="sonuc-satirlar">
+                <div class="ss"><span>Toplam</span><strong id="sonuc-toplam">0</strong></div>
+                <div class="ss"><span>Sıran</span><strong id="sonuc-sira">-</strong></div>
+                <div class="ss" id="ss-seri"><span>Seri</span><strong id="sonuc-seri">0</strong></div>
+            </div>
+            <p class="sonuc-fark" id="sonuc-fark"></p>
+            <div class="sonuc-rozet" id="sonuc-rozet"></div>
+            <div class="mod-sonuc gizli" id="mod-sonuc"></div>
+            <p class="sonuc-aciklama" id="sonuc-aciklama"></p>
+        </div>
+        <div class="esya-panel gizli" id="esya-panel">
+            <h3 class="esya-bas">🎒 Eşyalar</h3>
+            <div class="esya-liste" id="esya-liste"></div>
+            <p class="esya-not" id="esya-not"></p>
+        </div>
+        <div class="esya-panel kalkan-panel gizli" id="kalkan-panel">
+            <h3 class="esya-bas">🛡️ Kalkan hediye et</h3>
+            <p class="ek-not" id="kalkan-not"></p>
+            <div class="hedef-liste" id="kalkan-liste"></div>
+            <button class="dug yesil tam" id="kalkan-dug" type="button" disabled>🛡️ Önce bir arkadaş seç</button>
+        </div>
+    </section>
+
+    <!-- 8) Sıralama gösterimi (üç aşama) -->
+    <section class="ekran orta" id="ek-siralama">
+        <div id="sir-gerisayim">
+            <div class="buyuk-emoji">📊</div>
+            <h1>Sıralamalar birazdan ekranına gelecek</h1>
+            <div class="sir-sayac" id="sir-sayac">10</div>
+            <button class="dug buyuk gri" id="sir-cekil" type="button">Sıralamamı görmek istemiyorum 🙈</button>
+        </div>
+        <div id="sir-bekleme" class="gizli">
+            <div class="buyuk-emoji">⏳</div>
+            <h1>Öğretmen bekleniyor</h1>
+            <p class="alt">Sıralamalar öğretmenin onayıyla gelecek.</p>
+        </div>
+        <div id="sir-gizli" class="gizli">
+            <div class="buyuk-emoji">🙈</div>
+            <h1>Skorun hazır</h1>
+            <p class="alt">İstediğinde bakabilirsin — acelesi yok.</p>
+            <button class="dug buyuk mavi" id="sir-goster" type="button">👀 Fikrimi değiştirdim, göster</button>
+        </div>
+        <div id="sir-sonuc" class="gizli">
+            <h1 id="sir-baslik">Sıralaman</h1>
+            <div class="sir-buyuk" id="sir-buyuk"></div>
+            <p class="alt" id="sir-alt"></p>
+            <div class="sir-liste" id="sir-liste"></div>
+        </div>
+    </section>
+
+    <!-- 9) Final -->
+    <section class="ekran orta" id="ek-final">
+        <h1 id="final-baslik">🏆 Oyun bitti!</h1>
+        <div class="podyum" id="final-podyum"></div>
+        <div class="ozet-kart" id="final-ozet"></div>
+    </section>
+
+</main>
+
+<!-- Duraklat perdesi -->
+<div class="perde" id="perde-duraklat">
+    <div class="perde-ic">
+        <div class="buyuk-emoji">⏸</div>
+        <h2>Öğretmeninizi dinleyin</h2>
+        <p>Süre durdu, birazdan devam ediyoruz.</p>
+    </div>
+</div>
+
+<!-- Söz hakkı kurası: seçilen öğrencinin ekranı -->
+<div class="perde soz-perde" id="soz-perde">
+    <div class="perde-ic soz-kart">
+        <div class="buyuk-emoji">🎤</div>
+        <h2>Söz sende!</h2>
+        <p id="soz-alt">Öğretmenin seni seçti — düşünceni arkadaşlarına anlat.</p>
+        <button class="dug buyuk dolu" id="soz-kapat" type="button">Tamam 👍</button>
+    </div>
+</div>
+
+<!-- Saldırı bildirimi -->
+<div class="saldiri-kart" id="saldiri-kart" role="status" aria-live="polite"></div>
+
+<!-- Hediye / kutlama bildirimi (kalkan geldi vb.) -->
+<div class="hediye-kart" id="hediye-kart" role="status" aria-live="polite"></div>
+
+<!-- Soru geçiş uyarısı (soru iptali vb.) -->
+<div class="cerez" id="cerez" role="status" aria-live="polite"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/common/theme.js"></script>
+<script src="/common/fx.js"></script>
+<script src="/common/ui.js"></script>
+<script src="/student/mini.js"></script>
+<script src="/student/mod.js"></script>
+<script src="/student/screens.js"></script>
+<script src="/student/app.js"></script>
+</body>
+</html>

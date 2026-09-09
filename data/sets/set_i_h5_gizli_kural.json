@@ -1,0 +1,249 @@
+{
+  "ad": "Gizli Kural Makinesi",
+  "grup": "i",
+  "hafta": 5,
+  "tema": {
+    "ad": "Robot Laboratuvarı",
+    "dunya": "laboratuvar",
+    "slogan": "Robotun beynindeki kuralı çöz.",
+    "palet": {
+      "zemin": "#f0f9ff",
+      "zemin2": "#e0f2fe",
+      "vurgu": "#0284c7",
+      "vurgu2": "#ea580c",
+      "metin": "#0c4a6e",
+      "kart": "#ffffff",
+      "kartMetin": "#0c4a6e"
+    },
+    "simgeler": [
+      "🤖",
+      "🔬",
+      "⚡",
+      "🧪",
+      "💾",
+      "🛰️"
+    ]
+  },
+  "aciklama": "H5 · Gizli kural makineleri (Gf-RQ, Gf-I). 12 problem: 1-3 taban, 4-9 orta, 10-12 tavan.",
+  "varsayilan_sure_sn": 40,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "kural işletme",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Makinenin kuralı '×3'. 5 girerse ne çıkar?",
+      "secenekler": [
+        "8",
+        "12",
+        "15",
+        "18"
+      ],
+      "dogru": 2,
+      "aciklama": "Tek adım."
+    },
+    {
+      "no": 2,
+      "kategori": "ters makine",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Makinenin kuralı '×2'. Makineden 18 çıktıysa kaç girmiştir?",
+      "secenekler": [
+        "8",
+        "9",
+        "16",
+        "36"
+      ],
+      "dogru": 1,
+      "aciklama": "Yarılama."
+    },
+    {
+      "no": 3,
+      "kategori": "kural bulma",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Makine: 3→7, 5→11, 10→21. Kural nedir?",
+      "secenekler": [
+        "+4",
+        "×2+1",
+        "×2−1",
+        "+11"
+      ],
+      "dogru": 1,
+      "aciklama": "+4 yalnız ilk örnekte tutar — üç örnekle sına!",
+      "gorsel_svg": "<svg viewBox=\"0 0 360 178\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"45\" y=\"38\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">3</text><line x1=\"70\" y1=\"30\" x2=\"120\" y2=\"30\" stroke=\"#666\" stroke-width=\"3\" marker-end=\"none\"/><polygon points=\"120,24 132,30 120,36\" fill=\"#666\"/><rect x=\"136\" y=\"10\" width=\"88\" height=\"40\" rx=\"8\" fill=\"#6366f1\"/><text x=\"180\" y=\"37\" font-size=\"18\" text-anchor=\"middle\" fill=\"#fff\">KURAL ?</text><line x1=\"228\" y1=\"30\" x2=\"278\" y2=\"30\" stroke=\"#666\" stroke-width=\"3\"/><polygon points=\"278,24 290,30 278,36\" fill=\"#666\"/><text x=\"320\" y=\"38\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">7</text><text x=\"45\" y=\"84\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">5</text><line x1=\"70\" y1=\"76\" x2=\"120\" y2=\"76\" stroke=\"#666\" stroke-width=\"3\" marker-end=\"none\"/><polygon points=\"120,70 132,76 120,82\" fill=\"#666\"/><rect x=\"136\" y=\"56\" width=\"88\" height=\"40\" rx=\"8\" fill=\"#6366f1\"/><text x=\"180\" y=\"83\" font-size=\"18\" text-anchor=\"middle\" fill=\"#fff\">KURAL ?</text><line x1=\"228\" y1=\"76\" x2=\"278\" y2=\"76\" stroke=\"#666\" stroke-width=\"3\"/><polygon points=\"278,70 290,76 278,82\" fill=\"#666\"/><text x=\"320\" y=\"84\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">11</text><text x=\"45\" y=\"130\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">10</text><line x1=\"70\" y1=\"122\" x2=\"120\" y2=\"122\" stroke=\"#666\" stroke-width=\"3\" marker-end=\"none\"/><polygon points=\"120,116 132,122 120,128\" fill=\"#666\"/><rect x=\"136\" y=\"102\" width=\"88\" height=\"40\" rx=\"8\" fill=\"#6366f1\"/><text x=\"180\" y=\"129\" font-size=\"18\" text-anchor=\"middle\" fill=\"#fff\">KURAL ?</text><line x1=\"228\" y1=\"122\" x2=\"278\" y2=\"122\" stroke=\"#666\" stroke-width=\"3\"/><polygon points=\"278,116 290,122 278,128\" fill=\"#666\"/><text x=\"320\" y=\"130\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">21</text></svg>"
+    },
+    {
+      "no": 4,
+      "kategori": "bozuk örnek",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Kuralı '×2−1' olan makine bir kez bozuldu. Hangi örnek bozuk? 3→5, 6→11, 8→14, 10→19",
+      "secenekler": [
+        "3→5",
+        "6→11",
+        "8→14",
+        "10→19"
+      ],
+      "dogru": 2,
+      "aciklama": "8×2−1=15 olmalıydı."
+    },
+    {
+      "no": 5,
+      "kategori": "tek-çift",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Makine, giren İKİ TEK sayıyı topluyor. Çıkan sayı için ne KESİNDİR?",
+      "secenekler": [
+        "Hep tektir",
+        "Hep çifttir",
+        "Bazen tek bazen çift",
+        "Hep 10'dan büyüktür"
+      ],
+      "dogru": 1,
+      "aciklama": "Tek+tek=çift (3.1.6). Genelleme."
+    },
+    {
+      "no": 6,
+      "kategori": "makine zinciri",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "İki makine art arda: önce '+2', sonra '×3'. 4 girerse ne çıkar?",
+      "secenekler": [
+        "14",
+        "18",
+        "24",
+        "12"
+      ],
+      "dogru": 1,
+      "aciklama": "(4+2)×3."
+    },
+    {
+      "no": 7,
+      "kategori": "zincir ters",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Zincir: önce '×2', sonra '−3'. Sonuç 11 ise başta kaç girmiştir?",
+      "secenekler": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "dogru": 2,
+      "aciklama": "Tersten: 11+3=14, 14÷2=7."
+    },
+    {
+      "no": 8,
+      "kategori": "ters makine",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Makinenin kuralı '×3'. Çıkan 27 ise giren kaçtır?",
+      "secenekler": [
+        "6",
+        "8",
+        "9",
+        "81"
+      ],
+      "dogru": 2,
+      "aciklama": "Bölme ile geri."
+    },
+    {
+      "no": 9,
+      "kategori": "denk makineler",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "Robot A: 'önce ×2, sonra +2'. Robot B: 'önce +1, sonra ×2'. Aynı sayıyı verirsek ne olur?",
+      "secenekler": [
+        "A hep büyük çıkarır",
+        "B hep büyük çıkarır",
+        "İKİSİ HEP AYNI sonucu verir",
+        "Bazen A bazen B büyük"
+      ],
+      "dogru": 2,
+      "aciklama": "2n+2 = 2(n+1). Şaşırtıcı denklik — tavan başlangıcı."
+    },
+    {
+      "no": 10,
+      "kategori": "kural bulma",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Makine: 1→1, 2→4, 3→9. Kural nedir?",
+      "secenekler": [
+        "×1",
+        "+3",
+        "Sayıyı KENDİSİYLE çarpıyor",
+        "×3"
+      ],
+      "dogru": 2,
+      "aciklama": "Kare makinesi; ×3 yalnız 3→9'da tutar."
+    },
+    {
+      "no": 11,
+      "kategori": "ters kare",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Sayıyı kendisiyle çarpan makineden 36 çıktı. Giren kaçtır?",
+      "secenekler": [
+        "5",
+        "6",
+        "7",
+        "18"
+      ],
+      "dogru": 1,
+      "aciklama": "6×6."
+    },
+    {
+      "no": 12,
+      "kategori": "kural bulma",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "Makine: 5→14, 8→23, 10→29. Kural nedir?",
+      "secenekler": [
+        "×3−1",
+        "×2+4",
+        "+9",
+        "×3+1"
+      ],
+      "dogru": 0,
+      "aciklama": "5×3−1=14, 8×3−1=23, 10×3−1=29. ×2+4 ilk örnekte tutar, ikincide çöker — tavan.",
+      "gorsel_svg": "<svg viewBox=\"0 0 360 178\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"45\" y=\"38\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">5</text><line x1=\"70\" y1=\"30\" x2=\"120\" y2=\"30\" stroke=\"#666\" stroke-width=\"3\" marker-end=\"none\"/><polygon points=\"120,24 132,30 120,36\" fill=\"#666\"/><rect x=\"136\" y=\"10\" width=\"88\" height=\"40\" rx=\"8\" fill=\"#6366f1\"/><text x=\"180\" y=\"37\" font-size=\"18\" text-anchor=\"middle\" fill=\"#fff\">KURAL ?</text><line x1=\"228\" y1=\"30\" x2=\"278\" y2=\"30\" stroke=\"#666\" stroke-width=\"3\"/><polygon points=\"278,24 290,30 278,36\" fill=\"#666\"/><text x=\"320\" y=\"38\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">14</text><text x=\"45\" y=\"84\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">8</text><line x1=\"70\" y1=\"76\" x2=\"120\" y2=\"76\" stroke=\"#666\" stroke-width=\"3\" marker-end=\"none\"/><polygon points=\"120,70 132,76 120,82\" fill=\"#666\"/><rect x=\"136\" y=\"56\" width=\"88\" height=\"40\" rx=\"8\" fill=\"#6366f1\"/><text x=\"180\" y=\"83\" font-size=\"18\" text-anchor=\"middle\" fill=\"#fff\">KURAL ?</text><line x1=\"228\" y1=\"76\" x2=\"278\" y2=\"76\" stroke=\"#666\" stroke-width=\"3\"/><polygon points=\"278,70 290,76 278,82\" fill=\"#666\"/><text x=\"320\" y=\"84\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">23</text><text x=\"45\" y=\"130\" font-size=\"22\" text-anchor=\"middle\" fill=\"#333\">10</text><line x1=\"70\" y1=\"122\" x2=\"120\" y2=\"122\" stroke=\"#666\" stroke-width=\"3\" marker-end=\"none\"/><polygon points=\"120,116 132,122 120,128\" fill=\"#666\"/><rect x=\"136\" y=\"102\" width=\"88\" height=\"40\" rx=\"8\" fill=\"#6366f1\"/><text x=\"180\" y=\"129\" font-size=\"18\" text-anchor=\"middle\" fill=\"#fff\">KURAL ?</text><line x1=\"228\" y1=\"122\" x2=\"278\" y2=\"122\" stroke=\"#666\" stroke-width=\"3\"/><polygon points=\"278,116 290,122 278,128\" fill=\"#666\"/><text x=\"320\" y=\"130\" font-size=\"22\" text-anchor=\"middle\" fill=\"#dc2626\">?</text></svg>"
+    }
+  ]
+}

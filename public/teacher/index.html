@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KHLike — Öğretmen Paneli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common/base.css">
+<link rel="stylesheet" href="/teacher/style.css">
+</head>
+<body>
+
+<!-- ---------- Giriş kapısı ---------- -->
+<div class="giris-perde" id="giris-perde">
+    <form class="giris-kutu" id="giris-form">
+        <div class="giris-emoji">🔐</div>
+        <h1>Öğretmen Paneli</h1>
+        <p class="ipucu">Şifre sunucu başlarken konsola yazılır (yerelde varsayılan: <code>uycep-local</code>).</p>
+        <input type="password" id="giris-sifre" placeholder="Şifre" autocomplete="current-password" required>
+        <button class="dug buyuk dolu tam" type="submit">Giriş yap</button>
+        <p class="giris-hata" id="giris-hata"></p>
+    </form>
+</div>
+
+<!-- ---------- Panel ---------- -->
+<div class="panel gizli" id="panel">
+
+    <header class="p-ust">
+        <div class="p-baslik">
+            <strong>KHLike v2</strong>
+            <span class="p-durum" id="p-durum">BOSTA</span>
+            <span class="p-grup gizli" id="p-grup"></span>
+            <span class="p-format gizli" id="p-format"></span>
+            <span class="p-set" id="p-set"></span>
+        </div>
+        <div class="p-ust-sag">
+            <button class="dug gri" id="d-sahne-ac" type="button" title="/screen sayfasını yeni pencerede açar">🖥️ Sahneyi Aç <small>(projeksiyon / Zoom paylaşımı)</small></button>
+            <button class="dug gri" id="bilgi-ac" type="button" title="Kazanımlar, CHC ve veli özeti">ℹ️ Etkinlik Bilgisi</button>
+            <button class="dug kirmizi ayri" id="d-etkinligi-bitir" type="button" title="Etkinliği kapatır ve BOSTA'ya döner — set değiştirmenin tek yolu">🛑 Etkinliği Bitir</button>
+            <span class="kisayol-ipucu" title="Klavye kısayolları">⌨️ <kbd>Boşluk</kbd> duraklat · <kbd>→</kbd> sıradaki · <kbd>E</kbd> bitir · <kbd>+</kbd> süre · <kbd>S</kbd> sıralama · <kbd>F</kbd> final</span>
+        </div>
+    </header>
+
+    <!-- ================= 1) CANLI OYUN (varsayılan AÇIK) ================= -->
+    <section class="bolum acik" id="b-canli">
+        <button class="bolum-bas" type="button" data-hedef="b-canli"><span>🎮 Canlı Oyun</span><i>▾</i></button>
+        <div class="bolum-ic">
+
+            <div class="ozet-serit">
+                <div class="oz"><span>Soru</span><strong id="oz-soru">–</strong></div>
+                <div class="oz"><span>Oyuncu</span><strong id="oz-oyuncu">0</strong></div>
+                <div class="oz"><span>Cevaplayan</span><strong id="oz-cevaplayan">0</strong></div>
+                <div class="oz"><span>Kayıt</span><strong id="oz-log">0</strong></div>
+            </div>
+
+            <!-- Set seçici: HER DURUMDA görünür, BOSTA/LOBI dışında pasif -->
+            <div class="kontrol-satir set-satir">
+                <label class="etiket" for="set-sec">Etkinlik seti</label>
+                <select id="set-sec"></select>
+                <button class="dug yesil" id="d-set-sec" type="button">🎬 Etkinliği Aç</button>
+                <span class="not" id="set-not">Set seçilince grubu da belirlenir; öğrenci ekranlarında o grubun isim kartları belirir.</span>
+            </div>
+
+            <!-- Oyun formatı (mod katmanı): yalnız BOSTA/LOBI'de değiştirilebilir -->
+            <div class="kontrol-satir format-satir">
+                <label class="etiket" for="format-sec">Oyun formatı</label>
+                <select id="format-sec"></select>
+                <span class="not" id="format-not"></span>
+            </div>
+
+            <!-- LOBI -->
+            <div class="kontrol-satir durum-LOBI">
+                <button class="dug yesil buyuk" id="d-baslat" type="button">▶️ Oyunu Başlat</button>
+                <label class="onay"><input type="checkbox" id="karma-ac"> Karma oturum (öğrenci grup seçer)</label>
+            </div>
+
+            <!-- SORUDA -->
+            <div class="kontrol-satir durum-SORUDA">
+                <button class="dug sari" id="d-duraklat" type="button">⏸ Duraklat</button>
+                <button class="dug yesil gizli" id="d-devam" type="button">▶️ Devam</button>
+                <button class="dug mavi" id="d-sure10" type="button">⏱ +10 sn</button>
+                <button class="dug mavi" id="d-sure30" type="button">⏱ +30 sn</button>
+                <span class="ayirac"></span>
+                <button class="dug kirmizi" id="d-soru-bitir" type="button">⏹ Soruyu Bitir</button>
+            </div>
+
+            <!-- SORU_ARASI -->
+            <div class="kontrol-satir durum-SORU_ARASI">
+                <button class="dug yesil buyuk" id="d-siradaki" type="button">➡️ Sıradaki Soru</button>
+                <span class="satir-grup">
+                    <label class="etiket" for="sure-ez">Süre (sn)</label>
+                    <input class="sure-ez" id="sure-ez" type="number" min="5" max="600" step="5" placeholder="—"
+                           title="İsteğe bağlı: doldurursanız başlatılan soru bu süreyle açılır. Boşsa setin süresi kullanılır.">
+                    <span class="not soluk" id="sure-varsayilan"></span>
+                </span>
+                <button class="dug mavi" id="d-final" type="button">🏁 Finali Göster</button>
+                <span class="satir-grup">
+                    <label class="etiket" for="soru-atla">Soruya atla</label>
+                    <select id="soru-atla"></select>
+                    <button class="dug mavi" id="d-soru-baslat" type="button">▶ Bu soruyu başlat</button>
+                </span>
+            </div>
+
+            <!-- SORU_ARASI · anlatım ve kura (soruyu birlikte çözme anı) -->
+            <div class="kontrol-satir durum-SORU_ARASI anlat-satir">
+                <button class="dug mavi" id="d-anlatim" type="button"
+                        title="Soruyu doğru şıkkı, dağılımı ve açıklamasıyla tüm ekranlara yansıtır">📖 Soruyu Anlat</button>
+                <span class="satir-grup">
+                    <label class="etiket" for="kura-kapsam">🎲 Kura</label>
+                    <select id="kura-kapsam">
+                        <option value="dogru">Doğrulardan</option>
+                        <option value="yanlis">Yanlışlardan</option>
+                        <option value="herkes">Herkesten</option>
+                    </select>
+                    <button class="dug mavi" id="d-kura" type="button">🎲 Kura Çek</button>
+                </span>
+                <span class="kura-sonuc gizli" id="kura-sonuc"></span>
+            </div>
+
+            <!-- SORU_ARASI · yıkıcı işlem: diğer düğmelerden ayrı durur -->
+            <div class="kontrol-satir durum-SORU_ARASI iptal-satir">
+                <button class="dug kirmizi buyuk" id="d-geri-al" type="button">↩️ Bu soruyu iptal et (puanlar geri alınır)</button>
+                <span class="not">Hatalı ya da tartışmalı soru için: bu sorudan dağıtılan tüm puanlar herkesten geri alınır, kayıtları silinir.</span>
+            </div>
+
+            <!-- FINAL -->
+            <div class="kontrol-satir durum-FINAL">
+                <button class="dug mavi buyuk" id="d-rapor" type="button">📄 Rapor Ekranına Geç</button>
+            </div>
+
+            <!-- Kaydedilmemiş veri uyarısı (her durumda, kayıt varken) -->
+            <p class="uyari-serit gizli" id="rapor-uyari"></p>
+
+            <!-- Aktif soru kutusu (yalnız öğretmen görür) -->
+            <div class="soru-kutu gizli" id="soru-kutu">
+                <div class="sk-bas">
+                    <strong id="sk-no"></strong>
+                    <span class="sk-etiket" id="sk-kategori"></span>
+                    <span class="sk-etiket" id="sk-zorluk"></span>
+                    <span class="sk-etiket" id="sk-chc"></span>
+                </div>
+                <p class="sk-metin" id="sk-metin"></p>
+                <ul class="sk-sikler" id="sk-sikler"></ul>
+                <p class="sk-aciklama" id="sk-aciklama"></p>
+            </div>
+
+            <!-- Mod durumu: yalnız yarış dışı formatlarda -->
+            <details class="alt-bolum gizli" id="mod-bolum">
+                <summary id="mod-baslik">🎲 Mod durumu</summary>
+                <div class="alt-ic" id="mod-ic"></div>
+            </details>
+
+            <!-- Sahne: akıllı tahtada ne görünecek (Ayarlar'da DEĞİL, burada) -->
+            <details class="alt-bolum" id="siralama-bolum">
+                <summary>🖥️ Sahne ve sıralama gösterimi</summary>
+                <div class="alt-ic">
+                    <div class="kontrol-satir">
+                        <span class="not">Sahne ayrı bir pencerede açılır; yukarıdaki <strong>🖥️ Sahneyi Aç</strong> düğmesiyle projeksiyona ya da Zoom paylaşımına verin.</span>
+                    </div>
+                    <div class="kontrol-satir">
+                        <label class="onay"><input type="checkbox" id="ay-lb" checked> Sahnede sıralama görünsün (İlk 5 ve podyum)</label>
+                        <label class="onay"><input type="checkbox" id="ay-ses"> Tüm ekranlarda sesi kapat 🔇</label>
+                    </div>
+                    <hr class="ince">
+                    <div id="sir-akis">
+                    <div class="kontrol-satir">
+                        <label class="etiket" for="sir-sure">Çekilme süresi</label>
+                        <select id="sir-sure"><option value="5">5 sn</option><option value="10" selected>10 sn</option><option value="20">20 sn</option><option value="30">30 sn</option></select>
+                        <button class="dug mavi" id="d-sir-baslat" type="button">📊 Sıralamayı Göster</button>
+                        <span class="ayirac"></span>
+                        <button class="dug gri" id="d-lb" type="button">🙈 Sıralamayı Gizle</button>
+                    </div>
+                    <div class="kontrol-satir gizli" id="sir-onay">
+                        <span class="not" id="sir-cekilen">0 öğrenci çekildi</span>
+                        <label class="etiket" for="sir-kapsam">Kapsam</label>
+                        <select id="sir-kapsam"><option value="bireysel">Yalnız kendi ayrıntısı</option><option value="tam">Tam liste</option></select>
+                        <label class="etiket" for="sir-isim">İsimler</label>
+                        <select id="sir-isim"><option value="acik">İsimler Açık</option><option value="gizli">İsimler Gizli</option></select>
+                        <button class="dug yesil" id="d-sir-gonder" type="button">✅ Gönder</button>
+                    </div>
+                    <div class="kontrol-satir gizli" id="sir-yayin">
+                        <span class="not">Sıralamalar öğrenci ekranlarında.</span>
+                        <button class="dug gri" id="d-sir-kapat" type="button">✖ Kapat</button>
+                    </div>
+                    </div>
+                    <p class="not gizli" id="sir-kapali-not">Sıralama gösterimi soru arasında, finalde ve rapor ekranında kullanılabilir.</p>
+                </div>
+            </details>
+
+            <!-- Oyuncular -->
+            <h3 class="alt-baslik">👥 Oyuncular <span class="not" id="oyuncu-not"></span></h3>
+            <div class="tablo-sar">
+                <table class="tablo" id="oyuncu-tablo">
+                    <thead><tr><th>Öğrenci</th><th>Kod</th><th>Cevap</th><th>Durum</th><th class="sag">Puan</th><th>Seri</th><th>İşlem</th></tr></thead>
+                    <tbody id="oyuncu-govde"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 2) SONUÇLAR ================= -->
+    <section class="bolum" id="b-sonuc">
+        <button class="bolum-bas" type="button" data-hedef="b-sonuc"><span>📈 Sonuçlar ve Raporlar</span><i>▾</i></button>
+        <div class="bolum-ic">
+            <div class="kontrol-satir">
+                <button class="dug mavi" id="d-rapor-al" type="button">🔄 Raporu Getir</button>
+                <button class="dug mavi" id="d-csv-kod" type="button">⬇️ CSV (kodlu · araştırma)</button>
+                <button class="dug mavi" id="d-csv-isim" type="button">⬇️ CSV (isimli · veli)</button>
+                <button class="dug gri" id="d-tum-karne" type="button">🖨️ Tüm Karneleri Yazdır</button>
+            </div>
+            <div class="kontrol-satir">
+                <label class="etiket" for="d-onceki-csv">Geçen oturum CSV'si</label>
+                <input type="file" id="d-onceki-csv" accept=".csv,text/csv">
+                <span class="not">Yüklenirse karnelerde "geçen oturuma göre değişim" satırı görünür.</span>
+            </div>
+            <p class="not" id="rapor-not">Render diski kalıcı değildir — ders bitiminde CSV'yi indirin.</p>
+            <div id="rapor-alan"></div>
+        </div>
+    </section>
+
+    <!-- ================= 3) SORU BANKASI ================= -->
+    <section class="bolum" id="b-banka">
+        <button class="bolum-bas" type="button" data-hedef="b-banka"><span>🗂️ Soru Bankası</span><i>▾</i></button>
+        <div class="bolum-ic">
+            <p class="not">Yalnız içerik yönetimi — buradan oyun başlatılamaz. Oyun, yukarıdaki <strong>Canlı Oyun</strong> bölümünden açılır.</p>
+
+            <div class="kontrol-satir yukle-satir">
+                <label class="etiket" for="banka-dosya">📤 Set dosyası yükle</label>
+                <input type="file" id="banka-dosya" accept=".json,application/json">
+                <span class="not">Bir <code>.json</code> set dosyası seçin; doğrulanıp kaydedilir. Dosya adı set kimliği olur.</span>
+            </div>
+            <p class="not" id="banka-not"></p>
+
+            <div class="tablo-sar">
+                <table class="tablo" id="banka-tablo">
+                    <thead><tr><th>Set</th><th>Grup</th><th>Hafta</th><th class="sag">Soru</th><th>Tema</th><th>İşlem</th></tr></thead>
+                    <tbody id="banka-govde"></tbody>
+                </table>
+            </div>
+
+            <div id="banka-onizleme" class="onizleme gizli"></div>
+
+            <details class="alt-bolum" id="banka-gelismis">
+                <summary>🔧 Gelişmiş — ham JSON düzenleme</summary>
+                <div class="alt-ic">
+                    <div class="kontrol-satir">
+                        <label class="etiket" for="banka-set">Set</label>
+                        <select id="banka-set"></select>
+                        <button class="dug mavi" id="d-banka-oku" type="button">📖 Aç</button>
+                        <button class="dug gri" id="d-banka-yeni" type="button">➕ Yeni set şablonu</button>
+                    </div>
+                    <div class="kontrol-satir">
+                        <label class="etiket" for="banka-id">Dosya adı</label>
+                        <input type="text" id="banka-id" placeholder="orman_patikasi_e" size="26">
+                        <button class="dug yesil" id="d-banka-kaydet" type="button">💾 Kaydet</button>
+                        <span class="not">Kaydedince set doğrulanır ve listeler tazelenir.</span>
+                    </div>
+                    <textarea id="banka-json" spellcheck="false" rows="18" placeholder="Bir set açın ya da yeni şablon oluşturun."></textarea>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ================= 4) AYARLAR ================= -->
+    <section class="bolum" id="b-ayar">
+        <button class="bolum-bas" type="button" data-hedef="b-ayar"><span>⚙️ Ayarlar</span><i>▾</i></button>
+        <div class="bolum-ic">
+            <div class="kontrol-satir">
+                <label class="onay"><input type="checkbox" id="ay-karma"> Karma oturum — öğrenci giriş ekranında kendi grubunu seçer</label>
+            </div>
+            <p class="not">Normalde grup seçilmez: oturumun grubu <strong>seçili setin grubudur</strong> ve üst şeritte rozet olarak görünür.
+               Grubu değiştirmenin yolu başka bir set açmaktır (önce 🛑 Etkinliği Bitir).</p>
+            <hr class="ince">
+            <div class="kontrol-satir">
+                <label class="etiket" for="ay-misafir">Misafir öğrenci</label>
+                <input type="text" id="ay-misafir" placeholder="Ad Soyad" size="18">
+                <button class="dug mavi" id="d-misafir" type="button">➕ Misafir Ekle</button>
+            </div>
+            <p class="not">Misafirler M-01, M-02… kodu alır; kayıtlarda "misafir" işaretlenir ve araştırma setine dahil edilmez.</p>
+        </div>
+    </section>
+
+    <!-- ================= 5) ÖĞRENCİ LİSTESİ (en sonda) ================= -->
+    <section class="bolum" id="b-roster">
+        <button class="bolum-bas" type="button" data-hedef="b-roster"><span>📋 Öğrenci Listesi</span><i>▾</i></button>
+        <div class="bolum-ic">
+            <div class="kontrol-satir">
+                <input type="search" id="r-ara" placeholder="🔍 İsim ara" size="18">
+                <select id="r-grup"><option value="">Tüm gruplar</option><option value="p">P</option><option value="e">E</option><option value="i">İ</option><option value="c">C</option></select>
+                <select id="r-aktif"><option value="">Aktif + pasif</option><option value="1">Yalnız aktif</option><option value="0">Yalnız pasif</option></select>
+                <span class="ayirac"></span>
+                <button class="dug mavi" id="d-r-indir" type="button">⬇️ Listeyi İndir (ogrenciler.json)</button>
+            </div>
+            <div class="kontrol-satir">
+                <input type="text" id="r-kod" placeholder="Kod (E-04)" size="10">
+                <input type="text" id="r-isim" placeholder="İsim" size="16">
+                <select id="r-yeni-grup"><option value="p">P</option><option value="e" selected>E</option><option value="i">İ</option><option value="c">C</option></select>
+                <button class="dug yesil" id="d-r-ekle" type="button">➕ Ekle</button>
+            </div>
+            <div class="tablo-sar">
+                <table class="tablo" id="r-tablo">
+                    <thead><tr><th>Kod</th><th>İsim</th><th>Grup</th><th>Durum</th><th>İşlem</th></tr></thead>
+                    <tbody id="r-govde"></tbody>
+                </table>
+            </div>
+            <p class="not">Değişiklikler bu oturumda anında geçerlidir. Kalıcı olması için listeyi indirip depodaki <code>data/ogrenciler.json</code> ile değiştirin.</p>
+        </div>
+    </section>
+</div>
+
+<!-- ---------- Etkinlik Bilgisi modali ---------- -->
+<div class="modal" id="bilgi-modal">
+    <div class="modal-ic" role="dialog" aria-modal="true" aria-labelledby="bilgi-baslik">
+        <div class="modal-bas">
+            <h2 id="bilgi-baslik">ℹ️ Etkinlik Bilgisi</h2>
+            <button class="dug gri" id="bilgi-kapat" type="button">✖ Kapat</button>
+        </div>
+        <div class="sekmeler" role="tablist">
+            <button class="sekme acik" type="button" data-sek="kazanim" role="tab">🎯 Kazanımlar</button>
+            <button class="sekme" type="button" data-sek="chc" role="tab">🧠 CHC</button>
+            <button class="sekme" type="button" data-sek="veli" role="tab">👨‍👩‍👧 Veli Özeti</button>
+        </div>
+        <div class="sekme-ic" id="sek-kazanim"></div>
+        <div class="sekme-ic gizli" id="sek-chc"></div>
+        <div class="sekme-ic gizli" id="sek-veli">
+            <p id="veli-metin"></p>
+            <button class="dug mavi" id="d-veli-kopya" type="button">📋 Kopyala</button>
+        </div>
+    </div>
+</div>
+
+<!-- ---------- Öğrenci karnesi modali ---------- -->
+<div class="modal" id="karne-modal">
+    <div class="modal-ic">
+        <div class="modal-bas">
+            <h2 id="karne-baslik">Öğrenci Raporu</h2>
+            <div>
+                <button class="dug mavi" id="d-karne-yazdir" type="button">🖨️ Yazdır</button>
+                <button class="dug gri" id="karne-kapat" type="button">✖ Kapat</button>
+            </div>
+        </div>
+        <div id="karne-alan"></div>
+    </div>
+</div>
+
+<div class="cerez" id="cerez" role="status" aria-live="polite"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/common/ui.js"></script>
+<script src="/teacher/mod.js"></script>
+<script src="/teacher/canli.js"></script>
+<script src="/teacher/sonuclar.js"></script>
+<script src="/teacher/banka.js"></script>
+<script src="/teacher/liste.js"></script>
+<script src="/teacher/app.js"></script>
+</body>
+</html>

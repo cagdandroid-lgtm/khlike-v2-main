@@ -1,0 +1,247 @@
+{
+  "ad": "Sıralama Zincirleri",
+  "grup": "i",
+  "hafta": 4,
+  "tema": {
+    "ad": "Kayıp Şehir",
+    "dunya": "sehir",
+    "slogan": "Taş tabletlerdeki sırayı çöz.",
+    "palet": {
+      "zemin": "#f0fdfa",
+      "zemin2": "#ccfbf1",
+      "vurgu": "#0f766e",
+      "vurgu2": "#b45309",
+      "metin": "#134e4a",
+      "kart": "#ffffff",
+      "kartMetin": "#134e4a"
+    },
+    "simgeler": [
+      "🏛️",
+      "🗿",
+      "🏺",
+      "🌿",
+      "🐍",
+      "🪶"
+    ]
+  },
+  "aciklama": "H4 · İpuçlarından sıralama ve çıkarım (Gf-RG, 3.1.3). 12 problem: 1-3 taban, 4-9 orta, 10-12 tavan.",
+  "varsayilan_sure_sn": 40,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "üçlü zincir",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Derin, Ela'dan hızlı. Ela, Mert'ten hızlı. En yavaş kim?",
+      "secenekler": [
+        "Derin",
+        "Ela",
+        "Mert",
+        "Bilinemez"
+      ],
+      "dogru": 2,
+      "aciklama": "Zincir."
+    },
+    {
+      "no": 2,
+      "kategori": "dörtlü zincir",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 1,
+      "sure_sn": 35,
+      "soru": "Ege, Mert'ten önce; Mert, Ada'dan önce; Zeynep, Ege'den önce bitirdi. ÜÇÜNCÜ kim?",
+      "secenekler": [
+        "Zeynep",
+        "Ege",
+        "Mert",
+        "Ada"
+      ],
+      "dogru": 2,
+      "aciklama": "Z > E > M > A."
+    },
+    {
+      "no": 3,
+      "kategori": "konum",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Beş katlı binada Can, Ali'nin bir üst katında oturuyor. Ali 2. kattaysa Can kaçıncı kattadır?",
+      "secenekler": [
+        "1.",
+        "3.",
+        "4.",
+        "5."
+      ],
+      "dogru": 1,
+      "aciklama": "2+1."
+    },
+    {
+      "no": 4,
+      "kategori": "örtük eleman",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Dört kule: Mavi, Sarı, Yeşil, Kırmızı. Mavi, Sarı'dan yüksek. Yeşil en yüksek değil ama Mavi'den yüksek. EN YÜKSEK hangisi?",
+      "secenekler": [
+        "Mavi",
+        "Sarı",
+        "Yeşil",
+        "Kırmızı"
+      ],
+      "dogru": 3,
+      "aciklama": "Adı geçmeyen — örtük eleman."
+    },
+    {
+      "no": 5,
+      "kategori": "baştan-sondan",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "20 kişilik sırada Ediz baştan 8. sıradadır. Sondan kaçıncıdır?",
+      "secenekler": [
+        "12.",
+        "13.",
+        "14.",
+        "8."
+      ],
+      "dogru": 1,
+      "aciklama": "20+1−8."
+    },
+    {
+      "no": 6,
+      "kategori": "iki ölçüt",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 50,
+      "soru": "Boy sırası: Ali > Veli > Can. Yaş sırası: Can > Ali > Veli. Hangisi KESİN doğrudur?",
+      "secenekler": [
+        "En uzun olan en yaşlıdır",
+        "Ali yaşta da birincidir",
+        "Veli yaşta sonuncudur",
+        "Can hem en kısa hem en gençtir"
+      ],
+      "dogru": 2,
+      "aciklama": "İki listeyi ayrı oku: yaş listesinde Veli en sonda."
+    },
+    {
+      "no": 7,
+      "kategori": "çelişki",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "\"A, B'den önce bitirdi; B, C'den önce bitirdi; C, A'dan önce bitirdi.\" Üç cümle aynı anda doğru olabilir mi?",
+      "secenekler": [
+        "Evet",
+        "Hayır — döngü çelişkisi var",
+        "Yalnız berabere biterlerse",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "A>B>C>A imkânsız."
+    },
+    {
+      "no": 8,
+      "kategori": "karşılaştırma sayısı",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Üç farklı uzunluktaki kalemi KESİN sıralamak için en kötü ihtimalle kaç karşılaştırma gerekir?",
+      "secenekler": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "dogru": 2,
+      "aciklama": "İki karşılaştırma bazen yetmez; garanti 3."
+    },
+    {
+      "no": 9,
+      "kategori": "koşullu ipucu",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "Elif, Merve'den önce bitirdi. Merve, Zeynep'ten önce BİTİRMEDİ. Hangisi KESİNDİR?",
+      "secenekler": [
+        "Zeynep birincidir",
+        "Elif sonuncu değildir",
+        "Elif, Zeynep'ten önce bitirmiştir",
+        "Merve ikinci olmuştur"
+      ],
+      "dogru": 1,
+      "aciklama": "Kesin olan: Elif > Merve → Elif sonuncu olamaz. Gerisi iki ihtimalli."
+    },
+    {
+      "no": 10,
+      "kategori": "turnuva",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "Mini lig: Aslanlar Kartalları yendi, Kartallar Yunusları yendi, Yunuslar Aslanları yendi. Hangisi DOĞRUDUR?",
+      "secenekler": [
+        "Aslanlar herkesi yendi",
+        "Üç takım da birer maç kazandı",
+        "Yunuslar hiç kazanamadı",
+        "Kesin bir şampiyon vardır"
+      ],
+      "dogru": 1,
+      "aciklama": "Taş-kağıt-makas: sıralama her zaman kurulamaz — haftanın büyük fikri."
+    },
+    {
+      "no": 11,
+      "kategori": "yalancı kutu",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 60,
+      "soru": "Ödül üç kutudan birinde. Kırmızı: 'Ödül bende değil.' Mavi: 'Ödül bende değil.' Sarı: 'Ödül kırmızıda.' Bu üç yazıdan YALNIZ BİRİ doğruysa ödül nerededir?",
+      "secenekler": [
+        "Kırmızıda",
+        "Mavide",
+        "Sarıda",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "Mavide olsa: yalnız Kırmızı doğru ✓. Kırmızıda olsa Mavi ve Sarı doğru (2) ✗; Sarıda olsa Kırmızı ve Mavi doğru (2) ✗."
+    },
+    {
+      "no": 12,
+      "kategori": "sıra kurma",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "Dört kitap yan yana: Atlas en solda değil. Sözlük, Atlas'ın HEMEN sağında. Masal en sağda. Ansiklopedi nerededir?",
+      "secenekler": [
+        "En solda",
+        "Soldan 2.",
+        "Soldan 3.",
+        "En sağda"
+      ],
+      "dogru": 0,
+      "aciklama": "Masal 4. → Atlas-Sözlük bloğu 2-3'te → Ansiklopedi 1."
+    }
+  ]
+}

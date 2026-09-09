@@ -1,0 +1,411 @@
+{
+  "ad": "E Grubu Tanılama Yarışması",
+  "grup": "e",
+  "hafta": 1,
+  "tema": {
+    "ad": "Orman Patikası",
+    "dunya": "orman",
+    "slogan": "Patikadaki izleri takip et!",
+    "palet": {
+      "zemin": "#f0fdf4",
+      "zemin2": "#dcfce7",
+      "vurgu": "#16a34a",
+      "vurgu2": "#f59e0b",
+      "metin": "#14532d",
+      "kart": "#ffffff",
+      "kartMetin": "#14532d"
+    },
+    "simgeler": [
+      "🌲",
+      "🦊",
+      "🍄",
+      "🐿️",
+      "🦉",
+      "🍃"
+    ]
+  },
+  "aciklama": "Tanılama v3 · 24 problem, A+Click ayarı: çok adımlı, temsile dayalı. 1-6 taban, 7-17 orta, 18-24 tavan. Öğretmen sesli okur.",
+  "kazanimlar": [
+    "Sayı doğrusu, örüntü ve temsil problemlerinde kuralı keşfeder.",
+    "Verilen bilgiyi eleyerek tek doğru sonuca ulaşır.",
+    "Çok adımlı bir problemi ara adımlara böler.",
+    "Zaman baskısı altında dikkatini koruyarak seçim yapar."
+  ],
+  "chc": {
+    "birincil": "Gf",
+    "ikincil": [
+      "Gq",
+      "Gs"
+    ],
+    "gerekce": "Sorular kural keşfi ve çıkarım istediği için birincil alan Gf (akıcı akıl yürütme). Sayı ve miktar temsilleri Gq alanını, süreli yarış biçimi ise Gs (işlem hızı) alanını ikincil olarak çalıştırır."
+  },
+  "veli_ozeti": "Bu hafta çocuklarımızla sayı doğrusu, örüntü ve mantık bulmacaları üzerinden kuralı bulma çalıştık; sınıfça eğlenceli bir yarışma biçiminde oynadık. Bu etkinlik çocuğun bir problemi adımlara bölme ve elindeki bilgiden çıkarım yapma becerisini geliştirir. Evde bir bilmeceden sonra Bunu nereden anladın? diye sorarak aynı düşünme kasını çalıştırabilirsiniz.",
+  "varsayilan_sure_sn": 35,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "sayı doğrusu",
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Kurbağa 0'dan başladı: önce 3 zıpladı, sonra 2 zıpladı. Hangi sayıya kondu?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "dogru": 1,
+      "gorsel_svg": "<svg viewBox=\"0 0 460 70\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"40\" x2=\"440\" y2=\"40\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"20\" y1=\"33\" x2=\"20\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"20\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">0</text><line x1=\"62\" y1=\"33\" x2=\"62\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"62\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">1</text><line x1=\"104\" y1=\"33\" x2=\"104\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"104\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">2</text><line x1=\"146\" y1=\"33\" x2=\"146\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"146\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">3</text><line x1=\"188\" y1=\"33\" x2=\"188\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"188\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">4</text><line x1=\"230\" y1=\"33\" x2=\"230\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"230\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">5</text><line x1=\"272\" y1=\"33\" x2=\"272\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"272\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">6</text><line x1=\"314\" y1=\"33\" x2=\"314\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"314\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">7</text><line x1=\"356\" y1=\"33\" x2=\"356\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"356\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">8</text><line x1=\"398\" y1=\"33\" x2=\"398\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"398\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">9</text><line x1=\"440\" y1=\"33\" x2=\"440\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"440\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">10</text></svg>",
+      "aciklama": "Ardışık toplama, doğru üzerinde."
+    },
+    {
+      "no": 2,
+      "kategori": "örüntü",
+      "zorluk": 1,
+      "sure_sn": 20,
+      "soru": "🔵 🔵 🔺 🔵 🔵 🔺 🔵 🔵 ... Sırada hangisi var?",
+      "secenekler": [
+        "🔵",
+        "🔺",
+        "🟢",
+        "⭐"
+      ],
+      "dogru": 1,
+      "aciklama": "AAB bloğu."
+    },
+    {
+      "no": 3,
+      "kategori": "temsil",
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Çekmecemde 3 ÇİFT çorap var. Toplam kaç TEK çorap eder?",
+      "secenekler": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "dogru": 3,
+      "aciklama": "Çift kavramını sayıya çevirme."
+    },
+    {
+      "no": 4,
+      "kategori": "karşılaştırma",
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Kedi köpekten hafif. Köpek attan hafif. EN AĞIR hangisi?",
+      "secenekler": [
+        "Kedi",
+        "Köpek",
+        "At",
+        "Bilinemez"
+      ],
+      "dogru": 2,
+      "aciklama": "Üçlü zincir."
+    },
+    {
+      "no": 5,
+      "kategori": "gizli sayı",
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "❓ + ❓ = 10 ve iki kutu AYNI sayı. Kutudaki sayı kaç?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "dogru": 1,
+      "aciklama": "Yarılama."
+    },
+    {
+      "no": 6,
+      "kategori": "zaman",
+      "zorluk": 1,
+      "sure_sn": 20,
+      "soru": "Bugün cumartesi ise DÜN hangi gündü?",
+      "secenekler": [
+        "Pazar",
+        "Perşembe",
+        "Cuma",
+        "Pazartesi"
+      ],
+      "dogru": 2,
+      "aciklama": "Geriye gün."
+    },
+    {
+      "no": 7,
+      "kategori": "gizli zıplama",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Kurbağa 0'dan başladı: önce GİZLİ bir zıplama yaptı, sonra 4 zıpladı ve 9'a kondu. Gizli zıplama kaçtı?",
+      "secenekler": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "dogru": 2,
+      "gorsel_svg": "<svg viewBox=\"0 0 460 70\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"40\" x2=\"440\" y2=\"40\" stroke=\"#333\" stroke-width=\"3\"/><line x1=\"20\" y1=\"33\" x2=\"20\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"20\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">0</text><line x1=\"62\" y1=\"33\" x2=\"62\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"62\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">1</text><line x1=\"104\" y1=\"33\" x2=\"104\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"104\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">2</text><line x1=\"146\" y1=\"33\" x2=\"146\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"146\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">3</text><line x1=\"188\" y1=\"33\" x2=\"188\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"188\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">4</text><line x1=\"230\" y1=\"33\" x2=\"230\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"230\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">5</text><line x1=\"272\" y1=\"33\" x2=\"272\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"272\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">6</text><line x1=\"314\" y1=\"33\" x2=\"314\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"314\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">7</text><line x1=\"356\" y1=\"33\" x2=\"356\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"356\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">8</text><line x1=\"398\" y1=\"33\" x2=\"398\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"398\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">9</text><line x1=\"440\" y1=\"33\" x2=\"440\" y2=\"47\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"440\" y=\"64\" font-size=\"14\" text-anchor=\"middle\" fill=\"#333\">10</text><text x=\"398\" y=\"30\" font-size=\"20\" text-anchor=\"middle\">🐸</text></svg>",
+      "aciklama": "Eksik toplananı doğru üzerinde bulma."
+    },
+    {
+      "no": 8,
+      "kategori": "terazi",
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "1 elma, 2 armut kadar ağırdır. Terazinin SOL kefesinde 1 elma + 1 armut var. Dengelemek için SAĞ kefeye kaç armut koymalıyım?",
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dogru": 1,
+      "gorsel_svg": "<svg viewBox=\"0 0 300 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"90\" stroke=\"#8a6d3b\" stroke-width=\"6\"/><line x1=\"40\" y1=\"30\" x2=\"260\" y2=\"30\" stroke=\"#8a6d3b\" stroke-width=\"5\"/><path d=\"M15 60 Q40 85 65 60\" fill=\"none\" stroke=\"#555\" stroke-width=\"3\"/><path d=\"M235 60 Q260 85 285 60\" fill=\"none\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"40\" y1=\"30\" x2=\"40\" y2=\"58\" stroke=\"#555\" stroke-width=\"2\"/><line x1=\"260\" y1=\"30\" x2=\"260\" y2=\"58\" stroke=\"#555\" stroke-width=\"2\"/><text x=\"40\" y=\"78\" font-size=\"26\" text-anchor=\"middle\">🍎🍐</text><text x=\"260\" y=\"78\" font-size=\"26\" text-anchor=\"middle\">❓</text><rect x=\"120\" y=\"90\" width=\"60\" height=\"12\" fill=\"#8a6d3b\"/></svg>",
+      "aciklama": "Elmayı armuda çevirme: 2+1=3."
+    },
+    {
+      "no": 9,
+      "kategori": "takas",
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "1 ⭐ = 2 ❤️ eder. 1 ❤️ = 3 🍃 eder. 1 ⭐ kaç 🍃 eder?",
+      "secenekler": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "dogru": 1,
+      "aciklama": "Zincirleme dönüşüm: 2×3."
+    },
+    {
+      "no": 10,
+      "kategori": "küp sayma",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Merdiven küplerden yapıldı (1'li, 2'li ve 3'lü sütunlar). Toplam kaç küp kullanıldı?",
+      "secenekler": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "dogru": 1,
+      "gorsel_svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"100\" width=\"28\" height=\"28\" fill=\"#93c5fd\" stroke=\"#1e40af\" stroke-width=\"2\"/><rect x=\"90\" y=\"100\" width=\"28\" height=\"28\" fill=\"#93c5fd\" stroke=\"#1e40af\" stroke-width=\"2\"/><rect x=\"90\" y=\"70\" width=\"28\" height=\"28\" fill=\"#93c5fd\" stroke=\"#1e40af\" stroke-width=\"2\"/><rect x=\"150\" y=\"100\" width=\"28\" height=\"28\" fill=\"#93c5fd\" stroke=\"#1e40af\" stroke-width=\"2\"/><rect x=\"150\" y=\"70\" width=\"28\" height=\"28\" fill=\"#93c5fd\" stroke=\"#1e40af\" stroke-width=\"2\"/><rect x=\"150\" y=\"40\" width=\"28\" height=\"28\" fill=\"#93c5fd\" stroke=\"#1e40af\" stroke-width=\"2\"/></svg>",
+      "aciklama": "1+2+3."
+    },
+    {
+      "no": 11,
+      "kategori": "örüntü",
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "20, 17, 14, 11, ... Sıradaki?",
+      "secenekler": [
+        "9",
+        "8",
+        "7",
+        "10"
+      ],
+      "dogru": 1,
+      "aciklama": "Üçer geri."
+    },
+    {
+      "no": 12,
+      "kategori": "sıra",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Ece sırada BAŞTAN 3. ve SONDAN da 3. sırada. Sırada toplam kaç çocuk var?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "dogru": 1,
+      "aciklama": "3+3−1: Ece iki kez sayılmaz."
+    },
+    {
+      "no": 13,
+      "kategori": "zaman",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Film saat 3'te başladı ve 1 saat sürdü. Bitiminden YARIM saat sonra eve geldim. Eve kaçta geldim?",
+      "secenekler": [
+        "4",
+        "4 buçuk",
+        "5",
+        "3 buçuk"
+      ],
+      "dogru": 1,
+      "aciklama": "İki adımlı zaman."
+    },
+    {
+      "no": 14,
+      "kategori": "farklı olan",
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "Hangisi diğerlerinden FARKLI? 6, 8, 9, 10, 12",
+      "secenekler": [
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "dogru": 1,
+      "aciklama": "Tek sayı yalnız 9."
+    },
+    {
+      "no": 15,
+      "kategori": "problem",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "3 balonum vardı, 2'si patladı. Sonra elimde kalanın İKİ KATI kadar balon aldım. Kaç balonum oldu?",
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dogru": 1,
+      "aciklama": "1 kaldı + 2 aldı = 3."
+    },
+    {
+      "no": 16,
+      "kategori": "yön",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Yüzüm kuzeye dönük. Sağıma döndüm, sonra BİR KEZ daha sağıma döndüm. Şimdi nereye bakıyorum?",
+      "secenekler": [
+        "Kuzeye",
+        "Doğuya",
+        "Güneye",
+        "Batıya"
+      ],
+      "dogru": 2,
+      "aciklama": "İki çeyrek dönüş = yarım tur."
+    },
+    {
+      "no": 17,
+      "kategori": "paylaştırma",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "12 kurabiyeyi 3 tabağa eşit paylaştırdım, sonra HER tabaktan 1 kurabiye yedim. Her tabakta kaç kurabiye kaldı?",
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dogru": 1,
+      "aciklama": "4−1=3."
+    },
+    {
+      "no": 18,
+      "kategori": "gizli zıplama",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Kurbağa 0'dan başladı: İKİ EŞİT gizli zıplama yaptı, sonra 2 zıpladı ve 12'ye kondu. Bir gizli zıplama kaçtı?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "dogru": 1,
+      "aciklama": "(12−2)/2. Tavan başlangıcı."
+    },
+    {
+      "no": 19,
+      "kategori": "terazi",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "1 karpuz = 2 kavun eder. 1 kavun = 3 elma eder. 1 karpuz + 1 kavun kaç elma eder?",
+      "secenekler": [
+        "6",
+        "8",
+        "9",
+        "12"
+      ],
+      "dogru": 2,
+      "aciklama": "6+3=9. Çift zincir."
+    },
+    {
+      "no": 20,
+      "kategori": "harfli",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "A + A + B = 12 ve B = 2 ise A kaçtır?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "dogru": 1,
+      "aciklama": "Sembolle denklem sezgisi."
+    },
+    {
+      "no": 21,
+      "kategori": "yaş",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Ben kardeşimden 3 yaş büyüğüm. Kardeşim 2 yıl SONRA 6 yaşında olacak. Ben ŞİMDİ kaç yaşındayım?",
+      "secenekler": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "dogru": 1,
+      "aciklama": "Kardeş şimdi 4 → ben 7. İki adımlı zaman-yaş."
+    },
+    {
+      "no": 22,
+      "kategori": "yol sayma",
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Karınca sol alt köşeden şekere yalnız SAĞA ve YUKARI giderek ulaşacak. Kaç FARKLI yol vardır?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "dogru": 2,
+      "gorsel_svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"25\" y1=\"25\" x2=\"25\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"75\" y1=\"25\" x2=\"75\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"125\" y1=\"25\" x2=\"125\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"25\" y1=\"25\" x2=\"125\" y2=\"25\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"25\" y1=\"75\" x2=\"125\" y2=\"75\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"25\" y1=\"125\" x2=\"125\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"125\" r=\"8\" fill=\"#dc2626\"/><text x=\"25\" y=\"148\" font-size=\"11\" text-anchor=\"middle\">🐜 başlangıç</text><circle cx=\"125\" cy=\"25\" r=\"8\" fill=\"#16a34a\"/><text x=\"125\" y=\"14\" font-size=\"11\" text-anchor=\"middle\">🍬 hedef</text></svg>",
+      "aciklama": "2×2 ızgarada 6 yol. Sistemli sayma — gerçek tavan."
+    },
+    {
+      "no": 23,
+      "kategori": "gizli sayı",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "İki sayının TOPLAMI 9, FARKI 1. BÜYÜK sayı kaçtır?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "dogru": 1,
+      "aciklama": "5 ve 4."
+    },
+    {
+      "no": 24,
+      "kategori": "salyangoz",
+      "zorluk": 3,
+      "sure_sn": 60,
+      "soru": "Salyangoz 5 metrelik duvara tırmanıyor: her GÜNDÜZ 2 metre çıkıyor, her GECE 1 metre kayıyor. Kaçıncı GÜNDÜZ tepeye ulaşır?",
+      "secenekler": [
+        "3.",
+        "4.",
+        "5.",
+        "6."
+      ],
+      "dogru": 1,
+      "aciklama": "Gün sonları: 1,2,3 → 4. gündüz 3+2=5. Süper tavan; 5 diyen tuzağa düşer."
+    }
+  ]
+}

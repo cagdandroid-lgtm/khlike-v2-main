@@ -1,0 +1,248 @@
+{
+  "ad": "Sayı Örüntüleri",
+  "grup": "c",
+  "hafta": 2,
+  "tema": {
+    "ad": "Kristal Mağarası",
+    "dunya": "magara",
+    "slogan": "Her kristal bir kuralla parlar.",
+    "palet": {
+      "zemin": "#ecfeff",
+      "zemin2": "#cffafe",
+      "vurgu": "#0891b2",
+      "vurgu2": "#a21caf",
+      "metin": "#164e63",
+      "kart": "#ffffff",
+      "kartMetin": "#164e63"
+    },
+    "simgeler": [
+      "💎",
+      "⛏️",
+      "🔦",
+      "🪨",
+      "✨",
+      "🗻"
+    ]
+  },
+  "aciklama": "H2 · Sayı örüntülerinde gizli kural (Gf-I, 4.1.5). 12 problem: 1-3 taban, 4-9 orta, 10-12 tavan.",
+  "varsayilan_sure_sn": 40,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "örüntü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "5, 10, 20, 40, ... Sıradaki sayı?",
+      "secenekler": [
+        "50",
+        "60",
+        "80",
+        "100"
+      ],
+      "dogru": 2,
+      "aciklama": "×2."
+    },
+    {
+      "no": 2,
+      "kategori": "geriye örüntü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "100, 93, 86, 79, ... Sıradaki?",
+      "secenekler": [
+        "73",
+        "72",
+        "71",
+        "70"
+      ],
+      "dogru": 1,
+      "aciklama": "−7."
+    },
+    {
+      "no": 3,
+      "kategori": "kare sayılar",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 35,
+      "soru": "1, 4, 9, 16, 25, ... Sıradaki?",
+      "secenekler": [
+        "30",
+        "35",
+        "36",
+        "49"
+      ],
+      "dogru": 2,
+      "aciklama": "Kareler."
+    },
+    {
+      "no": 4,
+      "kategori": "artan fark",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "2, 3, 5, 8, 12, ... Sıradaki?",
+      "secenekler": [
+        "15",
+        "16",
+        "17",
+        "20"
+      ],
+      "dogru": 2,
+      "aciklama": "Fark 1,2,3,4,5."
+    },
+    {
+      "no": 5,
+      "kategori": "iki dizili",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "40, 1, 35, 2, 30, 3, ... Sıradaki?",
+      "secenekler": [
+        "25",
+        "4",
+        "20",
+        "5"
+      ],
+      "dogru": 0,
+      "aciklama": "Azalan 40,35,30 + artan 1,2,3."
+    },
+    {
+      "no": 6,
+      "kategori": "Fibonacci",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "1, 1, 2, 3, 5, 8, ... Sıradaki?",
+      "secenekler": [
+        "11",
+        "12",
+        "13",
+        "16"
+      ],
+      "dogru": 2,
+      "aciklama": "Önceki ikinin toplamı."
+    },
+    {
+      "no": 7,
+      "kategori": "uzak terim",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Kuralı '+4' olan dizinin 1. terimi 5. Dizinin 8. terimi kaçtır?",
+      "secenekler": [
+        "29",
+        "33",
+        "37",
+        "40"
+      ],
+      "dogru": 1,
+      "aciklama": "5 + 7×4. Saymadan sıçra."
+    },
+    {
+      "no": 8,
+      "kategori": "şekil örüntüsü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Üçgen kuleler 1, 3, 6 taşla kuruluyor. 4. kule kaç taşla kurulur?",
+      "secenekler": [
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "dogru": 2,
+      "aciklama": "+2,+3,+4 → 10.",
+      "gorsel_svg": "<svg viewBox=\"0 0 380 95\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"30\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"95\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"117\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"117\" cy=\"50\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"180\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"202\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"202\" cy=\"50\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"224\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"224\" cy=\"50\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"224\" cy=\"30\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"288\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"310\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"310\" cy=\"50\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"332\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"332\" cy=\"50\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"332\" cy=\"30\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"354\" cy=\"70\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"354\" cy=\"50\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"354\" cy=\"30\" r=\"8\" fill=\"#0891b2\"/><circle cx=\"354\" cy=\"10\" r=\"8\" fill=\"#0891b2\"/><text x=\"30\" y=\"92\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"106\" y=\"92\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"202\" y=\"92\" font-size=\"13\" text-anchor=\"middle\">6</text><text x=\"321\" y=\"92\" font-size=\"13\" text-anchor=\"middle\">?</text></svg>"
+    },
+    {
+      "no": 9,
+      "kategori": "dizide olmayan",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Kuralı '×3' olan dizi 2'den başlıyor: 2, 6, 18, 54, ... Hangi sayı bu dizide ASLA görünmez?",
+      "secenekler": [
+        "162",
+        "486",
+        "96",
+        "1458"
+      ],
+      "dogru": 2,
+      "aciklama": "Diğerleri 54'ün 3 katları zinciri; 96 değil. Üyelik testi."
+    },
+    {
+      "no": 10,
+      "kategori": "kural belirsizliği",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "3, 6, 12 dizisi için Cem '×2', Sena 'farklar 3, 6, 9 diye artıyor' diyor. 4. terimi kim kaç bulur?",
+      "secenekler": [
+        "İkisi de 24",
+        "Cem 24, Sena 21",
+        "Cem 24, Sena 18",
+        "İkisi de 21"
+      ],
+      "dogru": 1,
+      "aciklama": "×2 → 24; artan fark → 12+9=21. Az örnek kuralı tek yapmaz."
+    },
+    {
+      "no": 11,
+      "kategori": "genelleme",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "2, 5, 8, 11, ... dizisinin 20. terimi kaçtır?",
+      "secenekler": [
+        "59",
+        "60",
+        "62",
+        "65"
+      ],
+      "dogru": 0,
+      "aciklama": "2 + 19×3 = 59. Formülle sıçrama (4.1.5)."
+    },
+    {
+      "no": 12,
+      "kategori": "basamak örüntüsü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "7, 14, 21, 28, ... dizisinin 10. teriminin BİRLER basamağı kaçtır?",
+      "secenekler": [
+        "0",
+        "3",
+        "7",
+        "5"
+      ],
+      "dogru": 0,
+      "aciklama": "10. terim 70. Örüntüyü basamağa taşıma — tavan."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+/* Ortak temel: tipografi, renk değişkenleri, düğmeler, erişilebilirlik.
+   Palet değişkenleri set temasından doldurulur (common/theme.js). */
+
+:root {
+    --zemin: #eef2ff;
+    --zemin2: #e0e7ff;
+    --vurgu: #6366f1;
+    --vurgu2: #f59e0b;
+    --metin: #1e1b4b;
+    --kart: #ffffff;
+    --kart-metin: #1e1b4b;
+
+    --yesil: #15803d;
+    --yesil-ac: #dcfce7;
+    --sari: #b45309;
+    --sari-ac: #fef3c7;
+    --kirmizi: #b91c1c;
+    --kirmizi-ac: #fee2e2;
+    --mavi: #1d4ed8;
+    --mavi-ac: #dbeafe;
+    --gri: #475569;
+    --gri-ac: #e2e8f0;
+
+    --r: 18px;
+    --golge: 0 6px 20px rgba(15, 23, 42, .12);
+    --golge-buyuk: 0 14px 40px rgba(15, 23, 42, .18);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0; padding: 0; min-height: 100%;
+    font-family: Poppins, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px; line-height: 1.45;
+    color: var(--metin);
+    background: var(--zemin);
+    -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3 { margin: 0 0 .4em; line-height: 1.2; }
+button, input, select, textarea { font-family: inherit; font-size: 1rem; color: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+
+/* Odak halkası her yerde görünür (klavye erişilebilirliği) */
+:focus-visible { outline: 3px solid #0f172a; outline-offset: 3px; }
+
+/* ---- Düğme renk kodu (CLAUDE.md — tüm oyunlarda tutarlı) ---- */
+.dug {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+    min-height: 46px; padding: .6em 1.15em;
+    border: 2px solid transparent; border-radius: 14px;
+    font-weight: 600; background: var(--gri-ac); color: #0f172a;
+    transition: transform .12s ease, filter .12s ease;
+}
+.dug:hover:not(:disabled) { filter: brightness(.96); }
+.dug:active:not(:disabled) { transform: translateY(1px); }
+.dug.buyuk { min-height: 58px; font-size: 1.1rem; padding: .7em 1.6em; }
+.dug.tam { width: 100%; }
+
+.dug.yesil { background: var(--yesil-ac); color: #14532d; border-color: var(--yesil); }
+.dug.sari { background: var(--sari-ac); color: #78350f; border-color: var(--sari); }
+.dug.kirmizi { background: var(--kirmizi-ac); color: #7f1d1d; border-color: var(--kirmizi); }
+.dug.mavi { background: var(--mavi-ac); color: #1e3a8a; border-color: var(--mavi); }
+.dug.gri { background: var(--gri-ac); color: #0f172a; border-color: #94a3b8; }
+.dug.dolu { background: var(--vurgu); color: #fff; border-color: transparent; }
+
+/* ---- Ortak yerleşim parçaları ---- */
+.ekran { display: none; }
+.ekran.acik { display: block; }
+.gizli { display: none !important; }
+
+.ambiyans {
+    position: fixed; inset: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; display: none;
+}
+.katman { position: relative; z-index: 1; }
+
+.rozet {
+    display: inline-flex; align-items: center; gap: .35em;
+    padding: .18em .6em; border-radius: 999px;
+    background: rgba(15, 23, 42, .08); font-size: .85rem; font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}

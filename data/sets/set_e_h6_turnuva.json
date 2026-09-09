@@ -1,0 +1,247 @@
+{
+  "ad": "Ü1 Turnuvası",
+  "grup": "e",
+  "hafta": 6,
+  "tema": {
+    "ad": "Şampiyona Arenası",
+    "dunya": "arena",
+    "slogan": "Ünite 1 şampiyonası: dört kavram, tek arena!",
+    "palet": {
+      "zemin": "#fffbeb",
+      "zemin2": "#fef3c7",
+      "vurgu": "#d97706",
+      "vurgu2": "#dc2626",
+      "metin": "#78350f",
+      "kart": "#ffffff",
+      "kartMetin": "#78350f"
+    },
+    "simgeler": [
+      "🏆",
+      "🎪",
+      "🥇",
+      "🎉",
+      "⚡",
+      "🎯"
+    ]
+  },
+  "aciklama": "H6 · Ü1 şampiyonası: örüntü + kural makinesi + sıralama + çıkarım karması (Gf-I, Gf-RG, Gf-RQ). 12 yeni problem.",
+  "varsayilan_sure_sn": 30,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "örüntü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "🔺 🔵 🔵 🔺 🔵 🔵 🔺 ... Sırada hangisi var?",
+      "secenekler": [
+        "🔺",
+        "🔵",
+        "⭐",
+        "🟢"
+      ],
+      "dogru": 1,
+      "aciklama": "ABB bloğunda sıra 2. elemanda."
+    },
+    {
+      "no": 2,
+      "kategori": "sayı örüntüsü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "4, 8, 12, 16, ... Sıradaki?",
+      "secenekler": [
+        "18",
+        "20",
+        "24",
+        "22"
+      ],
+      "dogru": 1,
+      "aciklama": "Dörder."
+    },
+    {
+      "no": 3,
+      "kategori": "zincir",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Tavşan kaplumbağadan hızlı. Kaplumbağa salyangozdan hızlı. En hızlı kim?",
+      "secenekler": [
+        "Tavşan",
+        "Kaplumbağa",
+        "Salyangoz",
+        "Bilinemez"
+      ],
+      "dogru": 0,
+      "aciklama": "Zincir."
+    },
+    {
+      "no": 4,
+      "kategori": "ters makine",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "Makinenin kuralı '+5'. Makineden 12 çıktıysa kaç girmiştir?",
+      "secenekler": [
+        "6",
+        "7",
+        "8",
+        "17"
+      ],
+      "dogru": 1,
+      "aciklama": "12−5."
+    },
+    {
+      "no": 5,
+      "kategori": "gizli sayı",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "❓ + ❓ + 2 = 12 ve iki kutu AYNI sayı. Kutudaki sayı kaç?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "dogru": 1,
+      "aciklama": "(12−2)/2."
+    },
+    {
+      "no": 6,
+      "kategori": "baştan-sondan",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Sırada 7 çocuk var. Ben baştan 4.'yüm. SONDAN kaçıncıyım?",
+      "secenekler": [
+        "3.",
+        "4.",
+        "5.",
+        "7."
+      ],
+      "dogru": 1,
+      "aciklama": "7+1−4."
+    },
+    {
+      "no": 7,
+      "kategori": "geriye örüntü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "30, 26, 22, ... Sıradaki?",
+      "secenekler": [
+        "20",
+        "18",
+        "16",
+        "14"
+      ],
+      "dogru": 1,
+      "aciklama": "Dörder geri."
+    },
+    {
+      "no": 8,
+      "kategori": "farklı olan",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "Hangisi diğerlerinden FARKLI? 3, 5, 7, 8, 9",
+      "secenekler": [
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "dogru": 2,
+      "aciklama": "Tek çift sayı."
+    },
+    {
+      "no": 9,
+      "kategori": "iki adım",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "6 şekerim vardı. YARISINI yedim, sonra 1 şeker daha aldım. Kaç şekerim oldu?",
+      "secenekler": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "dogru": 1,
+      "aciklama": "3+1."
+    },
+    {
+      "no": 10,
+      "kategori": "kural bulma",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 40,
+      "soru": "Makine: 1→3, 2→5, 4→9. Kural nedir?",
+      "secenekler": [
+        "+2",
+        "×2+1",
+        "×3",
+        "+5"
+      ],
+      "dogru": 1,
+      "aciklama": "+2 yalnız ilkinde tutar."
+    },
+    {
+      "no": 11,
+      "kategori": "eleme",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 35,
+      "soru": "Top üç kutudan birinde. Kırmızı kutu boş. Mavi kutu boş. Top nerede? (Kutular: kırmızı, mavi, sarı)",
+      "secenekler": [
+        "Kırmızıda",
+        "Mavide",
+        "Sarıda",
+        "Hiçbirinde"
+      ],
+      "dogru": 2,
+      "aciklama": "Eleme."
+    },
+    {
+      "no": 12,
+      "kategori": "salyangoz",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Salyangoz 3 metrelik duvara tırmanıyor: gündüz 2 m çıkıyor, gece 1 m kayıyor. Kaçıncı GÜNDÜZ tepeye ulaşır?",
+      "secenekler": [
+        "2.",
+        "3.",
+        "4.",
+        "6."
+      ],
+      "dogru": 0,
+      "aciklama": "1. gün sonu 1 m → 2. gündüz 1+2=3. Şampiyonluk sorusu!"
+    }
+  ]
+}

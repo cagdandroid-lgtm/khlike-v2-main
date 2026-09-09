@@ -1,0 +1,247 @@
+{
+  "ad": "Kural Kur",
+  "grup": "i",
+  "hafta": 3,
+  "tema": {
+    "ad": "Mucitler Kulesi",
+    "dunya": "kule",
+    "slogan": "Kuralı kuran, kuleyi yükseltir.",
+    "palet": {
+      "zemin": "#fff7ed",
+      "zemin2": "#ffedd5",
+      "vurgu": "#ea580c",
+      "vurgu2": "#0891b2",
+      "metin": "#7c2d12",
+      "kart": "#ffffff",
+      "kartMetin": "#7c2d12"
+    },
+    "simgeler": [
+      "🗼",
+      "⚙️",
+      "🔧",
+      "💡",
+      "🧲",
+      "🪜"
+    ]
+  },
+  "aciklama": "H3 · Kendi kuralını kur ve kuralları eleştir (Gf-I, Glr). 12 problem: 1-3 taban, 4-9 orta, 10-12 tavan.",
+  "varsayilan_sure_sn": 35,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "kural seçme",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "5, 8, 11, 14, ... Bu dizinin kuralı nedir?",
+      "secenekler": [
+        "+2",
+        "+3",
+        "×2",
+        "−3"
+      ],
+      "dogru": 1,
+      "aciklama": "Sabit fark."
+    },
+    {
+      "no": 2,
+      "kategori": "kurala uyan",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Kuralı '×2' olan dizi hangisidir?",
+      "secenekler": [
+        "2, 4, 6, 8",
+        "3, 6, 12, 24",
+        "1, 3, 5, 7",
+        "5, 10, 15, 20"
+      ],
+      "dogru": 1,
+      "aciklama": "Katlama ile artış."
+    },
+    {
+      "no": 3,
+      "kategori": "uymayan",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "2, 4, 6, 9, 10 dizisinde hangi sayı KURALI BOZUYOR?",
+      "secenekler": [
+        "4",
+        "6",
+        "9",
+        "10"
+      ],
+      "dogru": 2,
+      "aciklama": "+2 kuralında 9 yerine 8 olmalıydı."
+    },
+    {
+      "no": 4,
+      "kategori": "kural işletme",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Ela'nın kuralı: 'Her sayı, öncekinin 2 katının 1 eksiği.' 3'ten başlarsa dizinin 3. sayısı kaç olur?",
+      "secenekler": [
+        "5",
+        "9",
+        "11",
+        "17"
+      ],
+      "dogru": 1,
+      "aciklama": "3 → 5 → 9."
+    },
+    {
+      "no": 5,
+      "kategori": "kural tanıma",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Hangi dizinin kuralı 'fark gitgide artıyor'dur?",
+      "secenekler": [
+        "2, 4, 6, 8",
+        "1, 2, 4, 7",
+        "5, 10, 15, 20",
+        "20, 18, 16, 14"
+      ],
+      "dogru": 1,
+      "aciklama": "Farklar 1,2,3."
+    },
+    {
+      "no": 6,
+      "kategori": "kural yazımı",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "20, 17, 14, 11 dizisinin kuralı hangisidir?",
+      "secenekler": [
+        "+3",
+        "−3",
+        "×3",
+        "−2"
+      ],
+      "dogru": 1,
+      "aciklama": "Sabit azalış."
+    },
+    {
+      "no": 7,
+      "kategori": "başlangıç bulma",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Kuralı '+4' olan bir dizinin 4. terimi 19. Dizinin 1. terimi kaçtır?",
+      "secenekler": [
+        "3",
+        "5",
+        "7",
+        "15"
+      ],
+      "dogru": 2,
+      "aciklama": "19 − 3×4 = 7. Geriye çalışma."
+    },
+    {
+      "no": 8,
+      "kategori": "çift kural",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "2, 4, 3, 6, 5, 10, ... Sıradaki sayı? (İpucu: kural iki adımda dönüyor)",
+      "secenekler": [
+        "9",
+        "20",
+        "8",
+        "12"
+      ],
+      "dogru": 0,
+      "aciklama": "×2 ve −1 dönüşümlü: 10−1=9."
+    },
+    {
+      "no": 9,
+      "kategori": "karşı örnek",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "\"Bu makinenin kuralı kesin +2'dir\" iddiasını ÇÜRÜTMEK için ne yeterlidir?",
+      "secenekler": [
+        "Kurala uyan 10 örnek daha bulmak",
+        "Kurala uymayan TEK bir örnek bulmak",
+        "Makineye hiç sayı sokmamak",
+        "Kuralı beğenmediğini söylemek"
+      ],
+      "dogru": 1,
+      "aciklama": "Tek karşı örnek iddiayı yıkar — bilimsel düşüncenin temeli."
+    },
+    {
+      "no": 10,
+      "kategori": "kural belirsizliği",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "2, 4, 8 dizisi için Ali '×2', Ayşe '+2, +4, +6 diye artıyor' diyor. Kim haklı?",
+      "secenekler": [
+        "Ali",
+        "Ayşe",
+        "İkisi de olabilir — devamına bakmak gerekir",
+        "İkisi de yanlış"
+      ],
+      "dogru": 2,
+      "aciklama": "4. terim ayırır: ×2 → 16, artan fark → 14. Az örnek kuralı TEK yapmaz — haftanın en önemli fikri."
+    },
+    {
+      "no": 11,
+      "kategori": "harf kuralı",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 40,
+      "soru": "A, C, E, G, ... Sıradaki harf hangisidir?",
+      "secenekler": [
+        "H",
+        "I",
+        "İ",
+        "K"
+      ],
+      "dogru": 1,
+      "aciklama": "Bir harf atlayarak (alfabede A-B-C-Ç-D-E-F-G-Ğ-H-I)."
+    },
+    {
+      "no": 12,
+      "kategori": "iki terimli kural",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Kural: 'Her terim, önceki İKİ terimin toplamı.' Dizi: 1, 1, 2, 3, 5, ... 7. terim kaçtır?",
+      "secenekler": [
+        "8",
+        "11",
+        "13",
+        "21"
+      ],
+      "dogru": 2,
+      "aciklama": "1,1,2,3,5,8,13. Fibonacci ile tanışma — tavan."
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "ad": "Ü1 Turnuvası",
+  "grup": "i",
+  "hafta": 6,
+  "tema": {
+    "ad": "Şampiyona Arenası",
+    "dunya": "arena",
+    "slogan": "Ünite 1 şampiyonası: dört kavram, tek arena!",
+    "palet": {
+      "zemin": "#eff6ff",
+      "zemin2": "#dbeafe",
+      "vurgu": "#2563eb",
+      "vurgu2": "#dc2626",
+      "metin": "#1e3a8a",
+      "kart": "#ffffff",
+      "kartMetin": "#1e3a8a"
+    },
+    "simgeler": [
+      "🏆",
+      "🎪",
+      "🥇",
+      "🎉",
+      "⚡",
+      "🎯"
+    ]
+  },
+  "aciklama": "H6 · Ü1 şampiyonası: örüntü + kural makinesi + sıralama + çıkarım karması. 12 yeni problem.",
+  "varsayilan_sure_sn": 35,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "örüntü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "2, 6, 18, ... Sıradaki?",
+      "secenekler": [
+        "36",
+        "48",
+        "54",
+        "72"
+      ],
+      "dogru": 2,
+      "aciklama": "×3."
+    },
+    {
+      "no": 2,
+      "kategori": "zincir",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Dört yüzücü: Cem, Efe'den önce; Efe, Nil'den önce; Sude, Cem'den önce bitirdi. SONUNCU kim?",
+      "secenekler": [
+        "Cem",
+        "Efe",
+        "Nil",
+        "Sude"
+      ],
+      "dogru": 2,
+      "aciklama": "S > C > E > N."
+    },
+    {
+      "no": 3,
+      "kategori": "kural işletme",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "Makinenin kuralı '×2−1'. 9 girerse ne çıkar?",
+      "secenekler": [
+        "17",
+        "18",
+        "19",
+        "16"
+      ],
+      "dogru": 0,
+      "aciklama": "18−1."
+    },
+    {
+      "no": 4,
+      "kategori": "takvim",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Ayın 1'i pazartesi. Ayın 15'i hangi gündür?",
+      "secenekler": [
+        "Pazar",
+        "Pazartesi",
+        "Salı",
+        "Cuma"
+      ],
+      "dogru": 1,
+      "aciklama": "14 gün = tam 2 hafta."
+    },
+    {
+      "no": 5,
+      "kategori": "denge",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "1 elma, 2 erik kadar ağırdır. 2 elma kaç erik kadar ağırdır?",
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "dogru": 2,
+      "aciklama": "Oran ikiye katlanır."
+    },
+    {
+      "no": 6,
+      "kategori": "iki dizili",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "2, 20, 4, 18, 6, 16, ... Sıradaki?",
+      "secenekler": [
+        "8",
+        "14",
+        "10",
+        "12"
+      ],
+      "dogru": 0,
+      "aciklama": "Artan 2,4,6,8 + azalan 20,18,16."
+    },
+    {
+      "no": 7,
+      "kategori": "rakam sayma",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "1'den 20'ye kadar sayıları yazarsam kaç tane '1' RAKAMI kullanırım?",
+      "secenekler": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "dogru": 2,
+      "aciklama": "1, 10, 11(iki tane), 12-19 → 12."
+    },
+    {
+      "no": 8,
+      "kategori": "koşullu",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Üç kardeşten Ada en büyük değil, Ege en küçük değil. Kesin olan hangisi? (Kardeşler: Ada, Ege, Jan)",
+      "secenekler": [
+        "Ege en büyüktür",
+        "Jan ortancadır",
+        "Ada, Jan'dan küçük olamaz",
+        "Tek kesinlik: en büyük Ada değil, en küçük Ege değil"
+      ],
+      "dogru": 3,
+      "aciklama": "İki dizilim hâlâ mümkün — kesinlik ile ihtimali ayırma."
+    },
+    {
+      "no": 9,
+      "kategori": "zincir ters",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Zincir: önce '×3', sonra '−2'. Sonuç 13 ise başta kaç girmiştir?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "dogru": 1,
+      "aciklama": "(13+2)/3."
+    },
+    {
+      "no": 10,
+      "kategori": "turnuva döngüsü",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Şahinler Boğaları yendi, Boğalar Kunduzları yendi, Kunduzlar Şahinleri yendi. \"Şahinler en güçlü takımdır\" diyen Efe haklı mı?",
+      "secenekler": [
+        "Haklı",
+        "Haksız — üç takım da birer maç kazandı, sıralama kurulamaz",
+        "Haklı çünkü ilk maçı kazandılar",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "Döngüde 'en güçlü' yoktur."
+    },
+    {
+      "no": 11,
+      "kategori": "güvercin yuvası",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Torbada DÖRT farklı renkte toplar var. Görmeden kaç top çekersem iki topun aynı renk olduğundan kesin emin olurum?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "dogru": 1,
+      "aciklama": "4 renk → 5 top."
+    },
+    {
+      "no": 12,
+      "kategori": "el sıkışma",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "7 kişilik grupta herkes birbiriyle BİRER kez el sıkışırsa kaç el sıkışma olur?",
+      "secenekler": [
+        "14",
+        "21",
+        "28",
+        "42"
+      ],
+      "dogru": 1,
+      "aciklama": "6+5+4+3+2+1. Şampiyonluk sorusu!"
+    }
+  ]
+}

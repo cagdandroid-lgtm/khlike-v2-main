@@ -1,0 +1,247 @@
+{
+  "ad": "Sıralama Zincirleri",
+  "grup": "e",
+  "hafta": 4,
+  "tema": {
+    "ad": "Dedektif Sokağı",
+    "dunya": "sokak",
+    "slogan": "İpuçlarını birleştir, sırayı çöz.",
+    "palet": {
+      "zemin": "#fef2f2",
+      "zemin2": "#fee2e2",
+      "vurgu": "#b91c1c",
+      "vurgu2": "#1d4ed8",
+      "metin": "#7f1d1d",
+      "kart": "#ffffff",
+      "kartMetin": "#7f1d1d"
+    },
+    "simgeler": [
+      "🕵️",
+      "🔍",
+      "🐾",
+      "🗂️",
+      "🚪",
+      "🧩"
+    ]
+  },
+  "aciklama": "H4 · İpuçlarından sıralama (Gf-RG, 2.1.3). 12 problem: 1-3 taban, 4-9 orta, 10-12 tavan. Öğretmen sesli okur.",
+  "varsayilan_sure_sn": 35,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "tek ipucu",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Ali, Can'dan uzun. Kim daha kısadır?",
+      "secenekler": [
+        "Ali",
+        "Can",
+        "Eşitler",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "Tek karşılaştırma."
+    },
+    {
+      "no": 2,
+      "kategori": "üçlü zincir",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Ece, Su'dan hızlı. Su, Mert'ten hızlı. En YAVAŞ kim?",
+      "secenekler": [
+        "Ece",
+        "Su",
+        "Mert",
+        "Bilinemez"
+      ],
+      "dogru": 2,
+      "aciklama": "Zincirleme."
+    },
+    {
+      "no": 3,
+      "kategori": "olay sırası",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Önce tohum ektik, sonra filiz çıktı, sonra çiçek açtı. İKİNCİ olan hangisi?",
+      "secenekler": [
+        "Tohum ekme",
+        "Filiz",
+        "Çiçek",
+        "Yaprak"
+      ],
+      "dogru": 1,
+      "aciklama": "Zaman sırası."
+    },
+    {
+      "no": 4,
+      "kategori": "ters kurulum",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Ayşe, Fatma'dan KISA. Zehra, Ayşe'den KISA. En UZUN kim?",
+      "secenekler": [
+        "Ayşe",
+        "Fatma",
+        "Zehra",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "'Kısa' zincirini çevirme."
+    },
+    {
+      "no": 5,
+      "kategori": "olumsuz ipucu",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Koşuda 3 çocuk var. Kaan ne birinci ne sonuncu. Kaan kaçıncı?",
+      "secenekler": [
+        "1.",
+        "2.",
+        "3.",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "Eleme."
+    },
+    {
+      "no": 6,
+      "kategori": "konum",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Sırada 6 çocuk var. Ben baştan 2.'yim. Arkamda kaç çocuk var?",
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dogru": 2,
+      "aciklama": "6−2."
+    },
+    {
+      "no": 7,
+      "kategori": "iki ipucu",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Ali, Veli'den uzun. Can da Veli'den KISA. En uzun kim?",
+      "secenekler": [
+        "Ali",
+        "Veli",
+        "Can",
+        "Bilinemez"
+      ],
+      "dogru": 0,
+      "aciklama": "Veli ortak nokta: Ali > Veli > Can."
+    },
+    {
+      "no": 8,
+      "kategori": "zaman ve fark",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Deniz, kardeşinden 3 yaş büyük. 5 yıl sonra kim daha büyük olur?",
+      "secenekler": [
+        "Deniz",
+        "Kardeşi",
+        "Eşit olurlar",
+        "Bilinemez"
+      ],
+      "dogru": 0,
+      "aciklama": "Yaş farkı zamanla değişmez — şaşırtıcı ama kesin!"
+    },
+    {
+      "no": 9,
+      "kategori": "dörtlü zincir",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Dört koşucu: Ege, Mert'ten önce; Mert, Ada'dan önce; Zeynep, Ege'den önce bitirdi. İKİNCİ kim?",
+      "secenekler": [
+        "Zeynep",
+        "Ege",
+        "Mert",
+        "Ada"
+      ],
+      "dogru": 1,
+      "aciklama": "Zeynep > Ege > Mert > Ada."
+    },
+    {
+      "no": 10,
+      "kategori": "örtük eleman",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Dört kule var: Mavi, Sarı, Yeşil, Kırmızı. Mavi, Sarı'dan yüksek. Yeşil en yüksek DEĞİL ama Mavi'den yüksek. En yüksek hangisi?",
+      "secenekler": [
+        "Mavi",
+        "Sarı",
+        "Yeşil",
+        "Kırmızı"
+      ],
+      "dogru": 3,
+      "aciklama": "Adı geçmeyen kule!"
+    },
+    {
+      "no": 11,
+      "kategori": "çelişki",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Deniyor ki: A, B'den uzun; B, C'den uzun; C de A'dan uzun. Bu mümkün mü?",
+      "secenekler": [
+        "Evet, olabilir",
+        "Hayır — böyle üç çocuk OLAMAZ",
+        "Yalnız ikizlerde olur",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "A>B>C>A döngüsü imkânsız. Mantık tavanı."
+    },
+    {
+      "no": 12,
+      "kategori": "baştan-sondan",
+      "chc": [
+        "Gf-RG"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Sırada 5 çocuk var. Ece baştan 3. sırada. SONDAN kaçıncıdır?",
+      "secenekler": [
+        "2.",
+        "3.",
+        "4.",
+        "5."
+      ],
+      "dogru": 1,
+      "aciklama": "5+1−3."
+    }
+  ]
+}

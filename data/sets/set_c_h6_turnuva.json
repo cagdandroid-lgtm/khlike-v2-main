@@ -1,0 +1,247 @@
+{
+  "ad": "Ü1 Turnuvası",
+  "grup": "c",
+  "hafta": 6,
+  "tema": {
+    "ad": "Şampiyona Arenası",
+    "dunya": "arena",
+    "slogan": "Ünite 1 şampiyonası: dört kavram, tek arena!",
+    "palet": {
+      "zemin": "#faf5ff",
+      "zemin2": "#f3e8ff",
+      "vurgu": "#7c3aed",
+      "vurgu2": "#dc2626",
+      "metin": "#4c1d95",
+      "kart": "#ffffff",
+      "kartMetin": "#4c1d95"
+    },
+    "simgeler": [
+      "🏆",
+      "🎪",
+      "🥇",
+      "🎉",
+      "⚡",
+      "🎯"
+    ]
+  },
+  "aciklama": "H6 · Ü1 şampiyonası: örüntü + kural makinesi + sıralama + çıkarım karması. 12 yeni problem.",
+  "varsayilan_sure_sn": 40,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "örüntü",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "3, 9, 27, ... Sıradaki?",
+      "secenekler": [
+        "54",
+        "72",
+        "81",
+        "108"
+      ],
+      "dogru": 2,
+      "aciklama": "×3."
+    },
+    {
+      "no": 2,
+      "kategori": "geriye çalışma",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 1,
+      "sure_sn": 35,
+      "soru": "Bir sayının 2 katının 3 fazlası 19'dur. Sayı kaçtır?",
+      "secenekler": [
+        "7",
+        "8",
+        "9",
+        "11"
+      ],
+      "dogru": 1,
+      "aciklama": "(19−3)/2."
+    },
+    {
+      "no": 3,
+      "kategori": "kural bulma",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Makine: 2→7, 3→10, 5→16. Kural nedir?",
+      "secenekler": [
+        "+5",
+        "×3+1",
+        "×4−1",
+        "×2+3"
+      ],
+      "dogru": 1,
+      "aciklama": "Üç örnekte de tutan tek kural."
+    },
+    {
+      "no": 4,
+      "kategori": "ardışık",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Ardışık BEŞ sayının toplamı 60. En KÜÇÜK sayı kaçtır?",
+      "secenekler": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "dogru": 1,
+      "aciklama": "Ortanca 12 → 10,11,12,13,14."
+    },
+    {
+      "no": 5,
+      "kategori": "kare sayma",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 50,
+      "soru": "2×3'lük dikdörtgen ızgarada büyüklü küçüklü kaç KARE vardır?",
+      "secenekler": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "dogru": 2,
+      "aciklama": "6 tane 1×1 + 2 tane 2×2."
+    },
+    {
+      "no": 6,
+      "kategori": "zaman",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Saat 09:40'ta başlayan deney 95 dakika sürdü. Kaçta bitti?",
+      "secenekler": [
+        "11:05",
+        "11:15",
+        "11:25",
+        "10:75"
+      ],
+      "dogru": 1,
+      "aciklama": "09:40+1s35d."
+    },
+    {
+      "no": 7,
+      "kategori": "el sıkışma",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "8 kişilik grupta herkes birbiriyle birer kez el sıkışırsa kaç el sıkışma olur?",
+      "secenekler": [
+        "21",
+        "24",
+        "28",
+        "56"
+      ],
+      "dogru": 2,
+      "aciklama": "7+6+...+1."
+    },
+    {
+      "no": 8,
+      "kategori": "üyelik",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Dizi 5'ten başlıyor, kuralı '+6': 5, 11, 17, 23, ... Hangi sayı bu dizide YOKTUR?",
+      "secenekler": [
+        "29",
+        "35",
+        "27",
+        "47"
+      ],
+      "dogru": 2,
+      "aciklama": "27−5=22, 6'ya bölünmez."
+    },
+    {
+      "no": 9,
+      "kategori": "uzun ters zincir",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "Zincir: önce '−2', sonra '×4', sonra '+1'. Sonuç 21 ise başta kaç girmiştir?",
+      "secenekler": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "dogru": 1,
+      "aciklama": "Tersten: 21−1=20, ÷4=5, +2=7."
+    },
+    {
+      "no": 10,
+      "kategori": "pizza kesme",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "Yuvarlak pizzayı 3 DÜZ kesimle EN FAZLA kaç parçaya ayırabilirsin?",
+      "secenekler": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "dogru": 1,
+      "aciklama": "1→2→4→7; 6 diyen hep merkezden geçirmiştir."
+    },
+    {
+      "no": 11,
+      "kategori": "kural eleme",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "2, 4, 8 dizisinin 4. terimi 16 ÇIKTI. Hangi kural adayı ELENİR?",
+      "secenekler": [
+        "×2",
+        "'Farklar 2, 4, 6 diye artıyor'",
+        "İkisi de elenir",
+        "Hiçbiri elenmez"
+      ],
+      "dogru": 1,
+      "aciklama": "Artan fark 14 verirdi; 16 onu eledi. ×2 hâlâ aday (ama tek aday olduğu kanıtlanmadı!)."
+    },
+    {
+      "no": 12,
+      "kategori": "güvercin üst düzey",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 60,
+      "soru": "Karanlık dolapta 6 ÇİFT ayakkabı (12 tek) karışık duruyor. Kesin BİR ÇİFT (sağ+sol eş) için en az kaç tek çekmeliyim?",
+      "secenekler": [
+        "2",
+        "6",
+        "7",
+        "12"
+      ],
+      "dogru": 2,
+      "aciklama": "En kötü: 6 farklı çiftten 6 tek → 7. çekiş tamamlar. Şampiyonluk sorusu!"
+    }
+  ]
+}

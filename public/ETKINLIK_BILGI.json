@@ -1,0 +1,15 @@
+{
+  "_aciklama": "KHLike v2 platform geneli varsayılan etkinlik bilgisi. Set tabanlı oyun olduğu için asıl kaynak her setin kendi kazanimlar/chc/veli_ozeti alanlarıdır; panel önce seçili sete bakar, yoksa bu dosyayı gösterir. Aynı içerik ETKINLIK_BILGI.md dosyasında da düz metin olarak durur.",
+  "kazanimlar": [
+    "Verilen bilgiden kural çıkarır ve yeni bir duruma uygular.",
+    "Birden çok seçeneği eleyerek gerekçeli bir karara varır.",
+    "Çok adımlı bir problemi ara adımlara böler.",
+    "Süre baskısı altında dikkatini ve kararlılığını korur."
+  ],
+  "chc": {
+    "birincil": "Gf",
+    "ikincil": ["Gq", "Gs"],
+    "gerekce": "KHLike soruları hazır bilgi değil, verilen ipuçlarından kural çıkarma ister; bu nedenle birincil alan Gf (akıcı akıl yürütme). Sayı ve miktar temsilleri Gq alanını, süreli yarış ritmi ise Gs (işlem hızı) alanını ikincil olarak çalıştırır. Setler kendi CHC beyanlarıyla bu varsayılanı geçersiz kılabilir."
+  },
+  "veli_ozeti": "Bu hafta çocuklarımızla mantık ve örüntü bulmacaları üzerinden kuralı bulma çalıştık; sınıfça eğlenceli bir yarışma biçiminde oynadık. Bu etkinlik çocuğun bir problemi adımlara bölme ve elindeki bilgiden çıkarım yapma becerisini geliştirir. Evde bir bilmeceden sonra Bunu nereden anladın? diye sorarak aynı düşünme kasını çalıştırabilirsiniz."
+}

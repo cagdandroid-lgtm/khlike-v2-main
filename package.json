@@ -1,0 +1,9 @@
+{
+  "name": "khlike-v2",
+  "version": "2.0.0",
+  "description": "UYCEP Logic - KHLike v2 sınıf yarışması platformu",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test/core.test.js" },
+  "dependencies": { "express": "^4.19.2", "socket.io": "^4.7.5" },
+  "engines": { "node": ">=18" }
+}

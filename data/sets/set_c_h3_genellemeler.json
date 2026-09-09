@@ -1,0 +1,247 @@
+{
+  "ad": "Genellemeler: Kuralı Sen Yaz",
+  "grup": "c",
+  "hafta": 3,
+  "tema": {
+    "ad": "Zaman Kulesi",
+    "dunya": "kule",
+    "slogan": "Kuralı bulan, geleceği görür.",
+    "palet": {
+      "zemin": "#fefce8",
+      "zemin2": "#fef9c3",
+      "vurgu": "#ca8a04",
+      "vurgu2": "#4338ca",
+      "metin": "#713f12",
+      "kart": "#ffffff",
+      "kartMetin": "#713f12"
+    },
+    "simgeler": [
+      "🕰️",
+      "⏳",
+      "🗝️",
+      "📐",
+      "🔭",
+      "🧭"
+    ]
+  },
+  "aciklama": "H3 · Kendi kuralını kur ve genelle (Gf-I, Glr, 4.1.5). 12 problem: 1-3 taban, 4-9 orta, 10-12 tavan.",
+  "varsayilan_sure_sn": 45,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "kural seçme",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "4, 11, 18, 25, ... Bu dizinin kuralı nedir?",
+      "secenekler": [
+        "+6",
+        "+7",
+        "×2+3",
+        "+8"
+      ],
+      "dogru": 1,
+      "aciklama": "Sabit fark 7."
+    },
+    {
+      "no": 2,
+      "kategori": "masa genellemesi",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 1,
+      "sure_sn": 45,
+      "soru": "Kare masalar uç uca: 1 masada 4, 2 masada 6, 3 masada 8 kişi... 10 masada kaç kişi oturur?",
+      "secenekler": [
+        "20",
+        "22",
+        "24",
+        "40"
+      ],
+      "dogru": 1,
+      "aciklama": "2n+2."
+    },
+    {
+      "no": 3,
+      "kategori": "çubuk genellemesi",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 50,
+      "soru": "Çubuklarla üçgen zinciri: 1 üçgen 3 çubuk, 2 üçgen 5, 3 üçgen 7 çubuk... 10 üçgen kaç çubuk ister?",
+      "secenekler": [
+        "19",
+        "20",
+        "21",
+        "30"
+      ],
+      "dogru": 2,
+      "aciklama": "2n+1: her yeni üçgen 2 çubuk ekler."
+    },
+    {
+      "no": 4,
+      "kategori": "çerçeve",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 55,
+      "soru": "4×4'lük kare zeminin yalnız KENARINDAKİ küçük kareler boyanıyor. Kaç kare boyanır?",
+      "secenekler": [
+        "12",
+        "16",
+        "14",
+        "10"
+      ],
+      "dogru": 0,
+      "aciklama": "16 kareden içteki 2×2=4 hariç → 12."
+    },
+    {
+      "no": 5,
+      "kategori": "el sıkışma",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "6 kişilik grupta herkes birbiriyle birer kez el sıkışırsa kaç el sıkışma olur?",
+      "secenekler": [
+        "12",
+        "15",
+        "18",
+        "30"
+      ],
+      "dogru": 1,
+      "aciklama": "5+4+3+2+1."
+    },
+    {
+      "no": 6,
+      "kategori": "koltuk sırası",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Sinemada her sıra bir öncekinden 2 koltuk fazla. 1. sırada 8 koltuk varsa 7. sırada kaç koltuk vardır?",
+      "secenekler": [
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "dogru": 1,
+      "aciklama": "8 + 6×2."
+    },
+    {
+      "no": 7,
+      "kategori": "üçgen sayılar",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "1, 3, 6, 10, 15, ... dizisinin 10. terimi kaçtır?",
+      "secenekler": [
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "dogru": 2,
+      "aciklama": "1+2+...+10 = 55."
+    },
+    {
+      "no": 8,
+      "kategori": "karşı örnek",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "\"Bütün kuşlar uçar\" iddiasını çürütmek için ne YETERLİDİR?",
+      "secenekler": [
+        "Uçan 100 kuş göstermek",
+        "Uçamayan TEK kuş göstermek (penguen!)",
+        "Kuşları saymak",
+        "Uçan bir böcek göstermek"
+      ],
+      "dogru": 1,
+      "aciklama": "Tek karşı örnek genellemeyi yıkar."
+    },
+    {
+      "no": 9,
+      "kategori": "kural belirsizliği",
+      "chc": [
+        "Gf-I"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "1, 2, 4 dizisinin devamı için Efe 8 (×2), Nil 7 (farklar 1, 2, 3 artıyor) diyor. Kim haklı OLABİLİR?",
+      "secenekler": [
+        "Yalnız Efe",
+        "Yalnız Nil",
+        "İkisi de — dizinin devamı görülmeden bilinemez",
+        "Hiçbiri"
+      ],
+      "dogru": 2,
+      "aciklama": "Aynı başlangıç, iki geçerli kural."
+    },
+    {
+      "no": 10,
+      "kategori": "sayma genellemesi",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "1'den 100'e kadar (100 dahil) kaç sayı 3'e tam bölünür?",
+      "secenekler": [
+        "30",
+        "33",
+        "34",
+        "50"
+      ],
+      "dogru": 1,
+      "aciklama": "3, 6, ..., 99 → 33."
+    },
+    {
+      "no": 11,
+      "kategori": "tek-çift genelleme",
+      "chc": [
+        "Gf-RQ"
+      ],
+      "zorluk": 3,
+      "sure_sn": 55,
+      "soru": "5, 8, 11, 14, 17, ... dizisinde terimler nasıl ilerler: 42. terim TEK Mİ ÇİFT Mİ? (Hesaplamadan!)",
+      "secenekler": [
+        "Tek",
+        "Çift",
+        "Bazen tek bazen çift",
+        "Bilinemez"
+      ],
+      "dogru": 1,
+      "aciklama": "Tek, çift, tek, çift... dönüşür; çift sıradaki her terim çift → 42. terim çift."
+    },
+    {
+      "no": 12,
+      "kategori": "kural tasarımı",
+      "chc": [
+        "Glr"
+      ],
+      "zorluk": 3,
+      "sure_sn": 60,
+      "soru": "Deniz kural kurdu: 'Her terim, SIRA NUMARASININ kendisiyle çarpımı.' Dizinin 5. terimi kaçtır?",
+      "secenekler": [
+        "10",
+        "20",
+        "25",
+        "55"
+      ],
+      "dogru": 2,
+      "aciklama": "n×n → 25. Sıra numarasından terime — tavan."
+    }
+  ]
+}

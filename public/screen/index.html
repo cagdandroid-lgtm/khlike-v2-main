@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KHLike — Sahne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/common/base.css">
+<link rel="stylesheet" href="/screen/style.css">
+</head>
+<body>
+
+<canvas class="ambiyans" id="ambiyans" aria-hidden="true"></canvas>
+
+<!-- Ses kilidini açmak için tek dokunuş (tarayıcı otomatik oynatma kuralı) -->
+<div class="baslat-perde" id="baslat-perde">
+    <div>
+        <div class="buyuk-emoji">📺</div>
+        <h1>Sahne hazır</h1>
+        <p>Müzik ve efektlerin çalışması için bir kez dokun.</p>
+        <button class="dug buyuk dolu" id="baslat-dug" type="button">▶ Sahneyi başlat</button>
+    </div>
+</div>
+
+<header class="s-ust katman">
+    <div class="s-etkinlik" id="s-etkinlik">KHLike</div>
+    <div class="s-ust-sag">
+        <span class="s-rozet" id="s-soru-no"></span>
+        <span class="s-rozet" id="s-format"></span>
+        <span class="s-rozet" id="s-oyuncu">👥 0</span>
+        <button class="ses-dug" id="ses-dug" type="button" aria-label="Sesi aç/kapat">🔊</button>
+    </div>
+</header>
+
+<main class="katman">
+
+    <!-- BOSTA -->
+    <section class="ekran s-orta" id="s-bosta">
+        <div class="buyuk-emoji">🎬</div>
+        <h1>Etkinlik seçiliyor</h1>
+        <p class="s-alt">Öğretmen panelden bir set açtığında sahne canlanacak.</p>
+    </section>
+
+    <!-- LOBI -->
+    <section class="ekran" id="s-lobi">
+        <div class="lobi-bas">
+            <h1 id="lobi-ad">Etkinlik</h1>
+            <p class="s-slogan" id="lobi-slogan"></p>
+            <div class="katil-kutu">
+                <span>Katıl:</span>
+                <strong id="lobi-adres">…</strong>
+            </div>
+        </div>
+        <div class="baloncuk-alan" id="baloncuk-alan"></div>
+        <div class="s-mod gizli" id="s-mod-lobi"></div>
+        <div class="lobi-sayi"><strong id="lobi-sayi">0</strong> oyuncu sahnede</div>
+    </section>
+
+    <!-- SORUDA -->
+    <section class="ekran s-soru" id="s-soru">
+        <div class="s-soru-ust">
+            <div class="halka" id="halka">
+                <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="h-arka" cx="60" cy="60" r="52"></circle>
+                    <circle class="h-on" id="halka-on" cx="60" cy="60" r="52"></circle>
+                </svg>
+                <span id="halka-sayi">30</span>
+            </div>
+            <p class="s-soru-metin" id="s-soru-metin"></p>
+            <div class="s-cevaplayan">
+                <strong id="s-cevaplayan">0</strong>
+                <span>cevapladı</span>
+            </div>
+        </div>
+        <div class="s-gorsel" id="s-gorsel"></div>
+        <div class="s-sikler" id="s-sikler"></div>
+        <div class="s-mod serit gizli" id="s-mod-soru"></div>
+        <div class="gerilim" id="gerilim" aria-hidden="true"></div>
+    </section>
+
+    <!-- SORU_ARASI -->
+    <section class="ekran s-sonuc" id="s-sonuc">
+        <h2 class="s-sonuc-bas" id="s-sonuc-bas">Sonuçlar</h2>
+        <div class="s-arasi-govde">
+            <div class="dagilim" id="dagilim"></div>
+            <div class="s-mod yan gizli" id="s-mod-arasi"></div>
+        </div>
+        <div class="lider" id="lider">
+            <h3>🏅 İlk 5</h3>
+            <ol id="lider-liste"></ol>
+        </div>
+    </section>
+
+    <!-- ANLATIM: öğretmen soruyu çözüyor (doğru şık + dağılım + açıklama) -->
+    <section class="ekran s-anlatim" id="s-anlatim">
+        <div class="sa-bas">
+            <span class="s-rozet sa-im">📖 Soruyu birlikte çözüyoruz</span>
+            <span class="s-rozet" id="sa-no"></span>
+        </div>
+        <h2 class="sa-soru" id="sa-metin"></h2>
+        <div class="s-gorsel" id="sa-gorsel"></div>
+        <div class="s-sikler sa-sikler" id="sa-sikler"></div>
+        <p class="sa-aciklama gizli" id="sa-aciklama"></p>
+    </section>
+
+    <!-- FINAL -->
+    <section class="ekran s-final" id="s-final">
+        <h1 id="final-bas">🏆 Şampiyonlar</h1>
+        <div class="s-podyum" id="s-podyum"></div>
+    </section>
+
+</main>
+
+<div class="perde" id="perde-duraklat">
+    <div class="perde-ic">
+        <div class="buyuk-emoji">⏸</div>
+        <h2>Ara verildi</h2>
+        <p>Öğretmeninizi dinleyin.</p>
+    </div>
+</div>
+
+<!-- Kura: zar animasyonu ve söz hakkı kartı -->
+<div class="perde kura-perde" id="kura-perde">
+    <div class="perde-ic kura-ic">
+        <div class="kura-etiket" id="kura-etiket">🎲 Kura çekiliyor…</div>
+        <div class="kura-zar" id="kura-zar">🎲</div>
+        <div class="kura-isim gizli" id="kura-isim"></div>
+    </div>
+</div>
+
+<div class="ucus-katman" id="ucus-katman" aria-hidden="true"></div>
+
+<!-- Fetih / kalkan haber akışı -->
+<div class="haber-akis" id="haber-akis" aria-hidden="true"></div>
+
+<div class="cerez" id="cerez" role="status" aria-live="polite"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/common/theme.js"></script>
+<script src="/common/fx.js"></script>
+<script src="/common/ui.js"></script>
+<script src="/screen/sahne.js"></script>
+<script src="/screen/mod.js"></script>
+<script src="/screen/app.js"></script>
+</body>
+</html>

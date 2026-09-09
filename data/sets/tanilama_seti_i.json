@@ -1,0 +1,408 @@
+{
+  "ad": "İ Grubu Tanılama Yarışması",
+  "grup": "i",
+  "hafta": 1,
+  "tema": {
+    "ad": "Bulut Şehri",
+    "dunya": "bulut",
+    "slogan": "Gökyüzündeki ipuçlarını topla.",
+    "palet": {
+      "zemin": "#eef2ff",
+      "zemin2": "#dbeafe",
+      "vurgu": "#6366f1",
+      "vurgu2": "#f472b6",
+      "metin": "#312e81",
+      "kart": "#ffffff",
+      "kartMetin": "#312e81"
+    },
+    "simgeler": [
+      "☁️",
+      "🎏",
+      "🕊️",
+      "🌤️",
+      "🎐",
+      "🪁"
+    ]
+  },
+  "aciklama": "Tanılama v3 · 24 problem, A+Click ayarı: çok adımlı, temsile dayalı. 1-6 taban, 7-17 orta, 18-24 tavan.",
+  "kazanimlar": [
+    "Örüntü ve ilişkilerdeki kuralı genelleyerek yeni duruma uygular.",
+    "Birden çok koşulu aynı anda değerlendirip eleme yapar.",
+    "Nicel ilişkileri (yarılama, oran, denklik) temsile çevirir.",
+    "Stratejisini gözden geçirir; ilk akla geleni sınayarak ilerler."
+  ],
+  "chc": {
+    "birincil": "Gf",
+    "ikincil": [
+      "Gq",
+      "Gsm"
+    ],
+    "gerekce": "Problemler tümevarımsal kural çıkarma istediği için birincil alan Gf. Sayısal ilişkiler Gq alanını, çok adımlı koşulları akılda tutma ise Gsm (çalışma belleği) alanını ikincil olarak çalıştırır."
+  },
+  "veli_ozeti": "Bu hafta çocuklarımızla örüntülerdeki kuralı bulma ve birden çok ipucunu birlikte değerlendirme üzerine çalıştık; sınıf içi bir yarışma oyunuyla yaptık. Bu etkinlik mantık yürütme ve birden çok bilgiyi aynı anda akılda tutma becerisini güçlendirir. Evde bir bilmece sorup Hangi ipucu seni bu cevaba götürdü? diye sohbet edebilirsiniz.",
+  "varsayilan_sure_sn": 40,
+  "sorular": [
+    {
+      "no": 1,
+      "kategori": "sayı doğrusu",
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Kurbağa 0'dan İKİ EŞİT zıplamayla 14'e ulaştı. Bir zıplama kaç birimdi?",
+      "secenekler": [
+        "6",
+        "7",
+        "8",
+        "12"
+      ],
+      "dogru": 1,
+      "aciklama": "Yarılama."
+    },
+    {
+      "no": 2,
+      "kategori": "analoji",
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Pazartesi → Salı ise, Aralık → ?",
+      "secenekler": [
+        "Kasım",
+        "Ocak",
+        "Şubat",
+        "Pazar"
+      ],
+      "dogru": 1,
+      "aciklama": "Ardışıklık ilişkisi, farklı alanda."
+    },
+    {
+      "no": 3,
+      "kategori": "çıkarım",
+      "zorluk": 1,
+      "sure_sn": 25,
+      "soru": "Ege, Mert'ten hızlı. Mert, Ada'dan hızlı. En YAVAŞ kim?",
+      "secenekler": [
+        "Ege",
+        "Mert",
+        "Ada",
+        "Bilinemez"
+      ],
+      "dogru": 2,
+      "aciklama": "Zincir."
+    },
+    {
+      "no": 4,
+      "kategori": "iki adım",
+      "zorluk": 1,
+      "sure_sn": 30,
+      "soru": "Yarısı 9 olan sayının 3 fazlası kaçtır?",
+      "secenekler": [
+        "12",
+        "15",
+        "21",
+        "24"
+      ],
+      "dogru": 2,
+      "aciklama": "18+3."
+    },
+    {
+      "no": 5,
+      "kategori": "çorap",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Karanlık çekmecede kırmızı ve mavi çoraplar var. GÖRMEDEN en az kaç çorap çekersem, AYNI renk bir çiftim olduğundan emin olurum?",
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "dogru": 1,
+      "aciklama": "3 çorap → en az iki aynı renk."
+    },
+    {
+      "no": 6,
+      "kategori": "takvim",
+      "zorluk": 2,
+      "sure_sn": 30,
+      "soru": "Ayın 1'i çarşamba. Ayın 10'u hangi gündür?",
+      "secenekler": [
+        "Perşembe",
+        "Cuma",
+        "Cumartesi",
+        "Pazar"
+      ],
+      "dogru": 1,
+      "aciklama": "9 gün sonra: 7+2."
+    },
+    {
+      "no": 7,
+      "kategori": "terazi",
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Kırmızı+mavi top 10 kg. Mavi+sarı top 8 kg. Kırmızı+sarı top 6 kg. MAVİ top kaç kg'dır?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "dogru": 2,
+      "aciklama": "(10+8−6)/2=6. Üçlü denklem sezgisi."
+    },
+    {
+      "no": 8,
+      "kategori": "rakam sayma",
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Bir kitabın sayfalarını 1'den başlayarak numaraladım ve toplam 25 RAKAM yazdım. Kitap kaç sayfadır?",
+      "secenekler": [
+        "15",
+        "16",
+        "17",
+        "25"
+      ],
+      "dogru": 2,
+      "aciklama": "1-9: 9 rakam; sonra 8 sayfa ×2=16 → 17. sayfa."
+    },
+    {
+      "no": 9,
+      "kategori": "kod çözme",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "A=1, B=2, C=3 ... kuralına göre (Türk alfabesi) 'ADA' kelimesinin sayı karşılığı nedir?",
+      "secenekler": [
+        "1-4-1",
+        "1-5-1",
+        "2-5-2",
+        "1-6-1"
+      ],
+      "dogru": 1,
+      "aciklama": "Ç dördüncü harf olduğundan D=5. İngiliz alfabesiyle sayan 1-4-1 tuzağına düşer."
+    },
+    {
+      "no": 10,
+      "kategori": "yol sayma",
+      "zorluk": 2,
+      "sure_sn": 50,
+      "soru": "Karınca sol alt köşeden şekere yalnız SAĞA ve YUKARI giderek ulaşacak. Kaç FARKLI yol vardır?",
+      "secenekler": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "dogru": 2,
+      "gorsel_svg": "<svg viewBox=\"0 0 150 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"25\" y1=\"25\" x2=\"25\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"75\" y1=\"25\" x2=\"75\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"125\" y1=\"25\" x2=\"125\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"25\" y1=\"25\" x2=\"125\" y2=\"25\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"25\" y1=\"75\" x2=\"125\" y2=\"75\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"25\" y1=\"125\" x2=\"125\" y2=\"125\" stroke=\"#333\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"125\" r=\"8\" fill=\"#dc2626\"/><text x=\"25\" y=\"148\" font-size=\"11\" text-anchor=\"middle\">🐜 başlangıç</text><circle cx=\"125\" cy=\"25\" r=\"8\" fill=\"#16a34a\"/><text x=\"125\" y=\"14\" font-size=\"11\" text-anchor=\"middle\">🍬 hedef</text></svg>",
+      "aciklama": "2×2 ızgarada 6 yol; sistemli sayma."
+    },
+    {
+      "no": 11,
+      "kategori": "tavuk-koyun",
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Çiftlikte tavuklar ve koyunlar var. 4 baş ve 10 ayak sayılıyor. Kaç KOYUN vardır?",
+      "secenekler": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "dogru": 0,
+      "aciklama": "1 koyun + 3 tavuk."
+    },
+    {
+      "no": 12,
+      "kategori": "kesir",
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Şeridin 3/4'ü boyalı ve boyalı kısım 12 cm. Şeridin TAMAMI kaç cm'dir?",
+      "secenekler": [
+        "15",
+        "16",
+        "18",
+        "20"
+      ],
+      "dogru": 1,
+      "gorsel_svg": "<svg viewBox=\"0 0 340 60\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"15\" width=\"225\" height=\"30\" fill=\"#f472b6\" stroke=\"#9d174d\" stroke-width=\"2\"/><rect x=\"245\" y=\"15\" width=\"75\" height=\"30\" fill=\"#fff\" stroke=\"#9d174d\" stroke-width=\"2\"/><line x1=\"95\" y1=\"15\" x2=\"95\" y2=\"45\" stroke=\"#9d174d\" stroke-width=\"1.5\"/><line x1=\"170\" y1=\"15\" x2=\"170\" y2=\"45\" stroke=\"#9d174d\" stroke-width=\"1.5\"/><text x=\"132\" y=\"10\" font-size=\"13\" text-anchor=\"middle\" fill=\"#9d174d\">boyalı kısım = 12 cm</text></svg>",
+      "aciklama": "Çeyrek=4 → 16. Kesirden bütüne gitme."
+    },
+    {
+      "no": 13,
+      "kategori": "gizli kural",
+      "zorluk": 2,
+      "sure_sn": 45,
+      "soru": "Makine: 3 girince 7, 5 girince 11, 10 girince 21 çıkarıyor. Kural nedir?",
+      "secenekler": [
+        "+4",
+        "×2 + 1",
+        "×2 − 1",
+        "+11"
+      ],
+      "dogru": 1,
+      "aciklama": "2n+1; +4 yalnız ilk örnekte tutar."
+    },
+    {
+      "no": 14,
+      "kategori": "çevre",
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Dikdörtgen bir kağıdın KÖŞESİNDEN küçük bir kare kesip çıkardım. Kalan şeklin ÇEVRESİ, ilk çevreye göre nasıl değişir?",
+      "secenekler": [
+        "Küçülür",
+        "Büyür",
+        "Aynı kalır",
+        "Bilinemez"
+      ],
+      "dogru": 2,
+      "aciklama": "Kesilen iki kenarın yerine eş iki kenar gelir — çevre değişmez. Sezgiye aykırı, güçlü ayırt edici."
+    },
+    {
+      "no": 15,
+      "kategori": "zaman",
+      "zorluk": 2,
+      "sure_sn": 35,
+      "soru": "Sınav 9'u çeyrek geçe başladı ve 50 dakika sürdü. Kaçta bitti?",
+      "secenekler": [
+        "10:00",
+        "10:05",
+        "10:15",
+        "9:55"
+      ],
+      "dogru": 1,
+      "aciklama": "9:15+50."
+    },
+    {
+      "no": 16,
+      "kategori": "iki dizili",
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "İç içe iki dizi: 20, 1, 18, 2, 16, 3, ... Sıradaki sayı?",
+      "secenekler": [
+        "14",
+        "15",
+        "4",
+        "12"
+      ],
+      "dogru": 0,
+      "aciklama": "Azalan 20,18,16,14 + artan 1,2,3."
+    },
+    {
+      "no": 17,
+      "kategori": "ardışık",
+      "zorluk": 2,
+      "sure_sn": 40,
+      "soru": "Ardışık ÜÇ sayının toplamı 27. En KÜÇÜK sayı kaçtır?",
+      "secenekler": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "dogru": 1,
+      "aciklama": "Ortanca 27/3=9 → 8,9,10."
+    },
+    {
+      "no": 18,
+      "kategori": "el sıkışma",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "5 kişilik grupta herkes birbiriyle BİRER kez el sıkışırsa toplam kaç el sıkışma olur?",
+      "secenekler": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "dogru": 1,
+      "aciklama": "4+3+2+1."
+    },
+    {
+      "no": 19,
+      "kategori": "örtük eleman",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Dört kule: Mavi, Sarı'dan yüksek. Yeşil en yüksek değil ama Mavi'den yüksek. EN YÜKSEK hangisidir?",
+      "secenekler": [
+        "Mavi",
+        "Sarı",
+        "Yeşil",
+        "Kırmızı"
+      ],
+      "dogru": 3,
+      "aciklama": "Adı geçmeyen Kırmızı — örtük eleman çıkarımı."
+    },
+    {
+      "no": 20,
+      "kategori": "salyangoz",
+      "zorluk": 3,
+      "sure_sn": 60,
+      "soru": "Salyangoz 10 metrelik kuyudan çıkıyor: her gündüz 3 m tırmanıyor, her gece 2 m kayıyor. Kaçıncı GÜNDÜZ ağza ulaşır?",
+      "secenekler": [
+        "7.",
+        "8.",
+        "9.",
+        "10."
+      ],
+      "dogru": 1,
+      "aciklama": "Gün sonları 1,2,...,7 → 8. gündüz 7+3=10. '10' diyen tuzağa düşer."
+    },
+    {
+      "no": 21,
+      "kategori": "küp boyama",
+      "zorluk": 3,
+      "sure_sn": 60,
+      "soru": "27 küçük küpten yapılmış 3×3×3 büyük küpün TÜM DIŞ yüzeyi boyandı. Kaç küçük küpün HİÇBİR yüzü boyanmadı?",
+      "secenekler": [
+        "0",
+        "1",
+        "3",
+        "6"
+      ],
+      "dogru": 1,
+      "aciklama": "Yalnız merkezdeki küp. Zihinde 3B canlandırma — tavan."
+    },
+    {
+      "no": 22,
+      "kategori": "yaş",
+      "zorluk": 3,
+      "sure_sn": 45,
+      "soru": "Ali'nin 2 yıl ÖNCEKİ yaşı, Veli'nin ŞİMDİKİ yaşına eşittir. Kim büyüktür?",
+      "secenekler": [
+        "Ali",
+        "Veli",
+        "Eşitler",
+        "Bilinemez"
+      ],
+      "dogru": 0,
+      "aciklama": "Ali 2 yaş büyük."
+    },
+    {
+      "no": 23,
+      "kategori": "güvercin yuvası",
+      "zorluk": 3,
+      "sure_sn": 50,
+      "soru": "Torbada kırmızı, mavi VE yeşil toplar var. GÖRMEDEN en az kaç top çekersem iki topun AYNI renk olduğundan kesin emin olurum?",
+      "secenekler": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "dogru": 1,
+      "aciklama": "3 renk → 4 top. E'deki 2 renkli sorunun bir üst katı."
+    },
+    {
+      "no": 24,
+      "kategori": "kek kesme",
+      "zorluk": 3,
+      "sure_sn": 60,
+      "soru": "Yuvarlak bir keki EN AZ kaç kesimle 8 EŞ parçaya bölebilirim? (Parçaları üst üste koymak serbest değil ama kek 3 boyutlu!)",
+      "secenekler": [
+        "3",
+        "4",
+        "7",
+        "8"
+      ],
+      "dogru": 0,
+      "aciklama": "2 dik çapraz kesim (4 parça) + 1 YATAY kesim = 8. Boyut değiştirme içgörüsü — süper tavan; 4 diyen 2 boyutta kalmıştır."
+    }
+  ]
+}
