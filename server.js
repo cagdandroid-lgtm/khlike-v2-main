@@ -11,6 +11,7 @@ const { Cekirdek, DURUM } = require('./lib/core');
 const setler = require('./lib/sets');
 const ogrenciDosyasi = require('./lib/students');
 const rapor = require('./lib/report');
+const { grupNormalize } = require('./lib/gruplar');
 
 const PORT = process.env.PORT || 3000;
 const RENDERDA = !!process.env.RENDER;
@@ -82,7 +83,7 @@ io.on('connection', (socket) => {
 
     // --- Öğrenci ---
     socket.on('login_screen', (d = {}) => { socket.join('lobby'); socket.data.girisGrubu = ''; socket.emit('login_list', c.girisPaketi('')); socket.emit('public_state', c.publicState()); });
-    socket.on('grup_sec', (d = {}) => { socket.data.girisGrubu = String(d.grup || '').toLowerCase(); socket.emit('login_list', c.girisPaketi(socket.data.girisGrubu)); });
+    socket.on('grup_sec', (d = {}) => { socket.data.girisGrubu = grupNormalize(d.grup); socket.emit('login_list', c.girisPaketi(socket.data.girisGrubu)); });
     socket.on('join_game', (d = {}) => {
         const playerId = String(d.playerId || '').slice(0, 64); if (!playerId) return socket.emit('join_error', 'Oturum kimliği yok, sayfayı yenile.');
         const r = c.katil(playerId, d.kod);

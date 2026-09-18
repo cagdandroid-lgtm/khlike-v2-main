@@ -119,7 +119,7 @@
     }
 
     /* ---------------- Duruma duyarlı görünürlük ---------------- */
-    var GRUP_AD = { p: '🐣 P Grubu', e: '🌱 E Grubu', i: '🚀 İ Grubu', c: '⚡ C Grubu' };
+    var GRUP_AD = { p: '🐣 P Grubu', e: '🌱 E Grubu', u: '🦉 U Grubu', i: '🦉 U Grubu', c: '🦉 U Grubu' };   // eski i/c → U
 
     function durumGoruntu(s) {
         DURUMLAR.forEach(function (d) {

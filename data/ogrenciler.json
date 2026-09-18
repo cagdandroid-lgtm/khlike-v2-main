@@ -1,6 +1,6 @@
 {
   "_aciklama": "UYCEP Logic ortak öğrenci listesi. TÜM oyun depolarında data/ogrenciler.json olarak AYNI dosya bulunur. Kodlar dönem boyunca sabittir ve asla değiştirilmez (araştırma verisinin sürekliliği buna bağlıdır). Ayrılan öğrenci silinmez, aktif:false yapılır. Doğum tarihi, iletişim vb. kişisel bilgiler bu dosyaya ASLA yazılmaz. İsimleri kendi öğrencilerinizle değiştirin; örnek isimler yer tutucudur.",
-  "guncelleme": "2026-08-29",
+  "guncelleme": "2026-09-18",
   "ogrenciler": [
     {
       "kod": "P-01",
@@ -39,22 +39,25 @@
       "aktif": true
     },
     {
-      "kod": "I-01",
+      "kod": "U-01",
       "isim": "Eylül Ç.",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-01"
     },
     {
-      "kod": "I-02",
+      "kod": "U-02",
       "isim": "Hasan Hüseyin",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-02"
     },
     {
-      "kod": "C-02",
-      "isim": "M. Emin",
-      "grup": "c",
-      "aktif": true
+      "kod": "U-04",
+      "isim": "Eren",
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-04"
     },
     {
       "kod": "P-04",
@@ -147,112 +150,130 @@
       "aktif": true
     },
     {
-      "kod": "I-04",
-      "isim": "Eren",
-      "grup": "i",
-      "aktif": true
-    },
-    {
-      "kod": "I-06",
+      "kod": "U-06",
       "isim": "Ege",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-06"
     },
     {
-      "kod": "I-08",
+      "kod": "U-08",
       "isim": "Güney",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-08"
     },
     {
-      "kod": "I-10",
+      "kod": "U-10",
       "isim": "Harun Doruk",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-10"
     },
     {
-      "kod": "I-12",
+      "kod": "U-12",
       "isim": "Toprak",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-12"
     },
     {
-      "kod": "I-14",
+      "kod": "U-14",
       "isim": "Yiğit",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-14"
     },
     {
-      "kod": "I-16",
+      "kod": "U-16",
       "isim": "Murat Ege",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-16"
     },
     {
-      "kod": "I-18",
+      "kod": "U-18",
       "isim": "Alphan",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-18"
     },
     {
-      "kod": "I-20",
+      "kod": "U-20",
       "isim": "Aras C.",
-      "grup": "i",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "I-20"
     },
     {
-      "kod": "C-04",
+      "kod": "U-22",
+      "isim": "M. Emin",
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-02"
+    },
+    {
+      "kod": "U-24",
       "isim": "Ali U.",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-04"
     },
     {
-      "kod": "C-06",
+      "kod": "U-26",
       "isim": "Aslan G.",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-06"
     },
     {
-      "kod": "C-08",
+      "kod": "U-28",
       "isim": "Doruk G.",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-08"
     },
     {
-      "kod": "C-10",
+      "kod": "U-30",
       "isim": "Sarp Ö.",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-10"
     },
     {
-      "kod": "C-12",
+      "kod": "U-32",
       "isim": "R. Talha",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-12"
     },
     {
-      "kod": "C-14",
+      "kod": "U-34",
       "isim": "Batu D.",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-14"
     },
     {
-      "kod": "C-16",
+      "kod": "U-36",
       "isim": "Tuğşah",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-16"
     },
     {
-      "kod": "C-18",
+      "kod": "U-38",
       "isim": "Rüzgar",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-18"
     },
     {
-      "kod": "C-20",
+      "kod": "U-40",
       "isim": "Alparslan E.",
-      "grup": "c",
-      "aktif": true
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-20"
     }
   ]
 }

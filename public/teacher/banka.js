@@ -7,7 +7,7 @@
     var el = UI.el, yap = UI.yap, bosalt = UI.bosalt;
     var ctx = null, setler = [], varsayilanBilgi = null, acikOnizleme = null;
     var SIK_HARF = ['A', 'B', 'C', 'D', 'E', 'F'];
-    var GRUP_AD = { p: 'P', e: 'E', i: 'İ', c: 'C' };
+    var GRUP_AD = { p: 'P', e: 'E', u: 'U', i: 'U', c: 'U' };   // eski i/c → U (birleşti)
 
     var SABLON = {
         ad: 'Yeni Etkinlik', grup: 'e', hafta: 1,

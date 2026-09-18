@@ -7,9 +7,9 @@
     var GRUP_ETIKET = {   // resmî grup adları — uydurma takma ad üretilmez
         p: { ad: 'P Grubu', emoji: '🐣', renk: '#f472b6' },
         e: { ad: 'E Grubu', emoji: '🌱', renk: '#22c55e' },
-        i: { ad: 'İ Grubu', emoji: '🚀', renk: '#6366f1' },
-        c: { ad: 'C Grubu', emoji: '⚡', renk: '#0ea5e9' }
+        u: { ad: 'U Grubu', emoji: '🦉', renk: '#7c3aed' }    // İ + C birleşimi
     };
+    GRUP_ETIKET.i = GRUP_ETIKET.c = GRUP_ETIKET.u;          // eski i/c kodları U Grubu sayılır
 
     // Türkçe büyütme: "ipek" → "İ" (locale'siz toUpperCase "I" verirdi).
     function bas(isim) { return (isim || '?').trim().charAt(0).toLocaleUpperCase('tr'); }

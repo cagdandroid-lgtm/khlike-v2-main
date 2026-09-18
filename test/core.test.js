@@ -10,8 +10,8 @@ let t = 1000; const c = new Cekirdek({ now: () => t });
 c.setler = setler.yukle().setler; c.ogrenciler = ogr.yukle().ogrenciler;
 assert.ok(c.setler['tanilama_seti_e'], 'E seti yüklenmeli');
 const E = c.ogrenciler.filter(o => o.grup === 'e' && o.aktif !== false).slice(0, 3).map(o => o.kod);
-const ilkI = c.ogrenciler.find(o => o.grup === 'i' && o.aktif !== false).kod;
-assert.ok(E.length === 3 && ilkI, 'listede en az 3 E ve 1 İ öğrencisi olmalı');
+const ilkI = c.ogrenciler.find(o => o.grup === 'u' && o.aktif !== false).kod;   // U = eski İ + C
+assert.ok(E.length === 3 && ilkI, 'listede en az 3 E ve 1 U öğrencisi olmalı');
 
 // BOSTA: giriş beklemede, katılım reddedilir
 assert.strictEqual(c.girisPaketi('').beklemede, true);
@@ -98,7 +98,16 @@ c2.setSec('tanilama_seti_i'); c2.katil('q1', ilkI); c2.oyunuBaslat();
 assert.strictEqual(c2.setSec('tanilama_seti_e').ok, false, 'oyun sürerken set değişmez');
 assert.ok(c2.etkinligiBitir().ok); assert.strictEqual(c2.durum, DURUM.BOSTA);
 assert.ok(c2.setSec('tanilama_seti_e').ok); assert.strictEqual(c2.aktifGrup, 'e', 'grup = setin grubu');
-assert.strictEqual(c2.katil('q1', ilkI).ok, false, 'I öğrencisi E etkinliğine giremez');
+assert.strictEqual(c2.katil('q1', ilkI).ok, false, 'U öğrencisi E etkinliğine giremez');
+// İ + C → U birleşmesi: eski i/c değerleri u kabul edilir
+const { grupNormalize } = require('../lib/gruplar'); const setDosyasi = require('../lib/sets');
+assert.strictEqual(grupNormalize('i'), 'u'); assert.strictEqual(grupNormalize('C'), 'u'); assert.strictEqual(grupNormalize('x'), '');
+assert.deepStrictEqual(setDosyasi.dogrula({ ad: 'eski', grup: 'c', sorular: [{ soru: 's', secenekler: ['a', 'b'], dogru: 0 }] }), [], 'eski c grubu set geçerli');
+const c4 = new Cekirdek({ now: () => t }); c4.setler = c.setler; c4.ogrenciler = c.ogrenciler.concat([{ kod: 'C-99', isim: 'Eski C', grup: 'c', aktif: true }]);
+assert.ok(c4.setSec('tanilama_seti_c').ok); assert.strictEqual(c4.aktifGrup, 'u', 'eski c seti U oturumu açar');
+assert.ok(c4.girisPaketi('').ogrenciler.some(o => o.kod === 'C-99'), 'eski c öğrencisi U kartlarında görünür');
+c4.karma = true; assert.deepStrictEqual(c4.girisPaketi('').gruplar, ['p', 'e', 'u'], 'karma grup listesi p/e/u');
+assert.ok(c4.girisPaketi('i').ogrenciler.length > 0 && c4.girisPaketi('i').grup === 'u', 'karma: eski i seçimi u sayılır');
 // misafir + yeni etkinlik
 const rosterOnce = c.ogrenciler.length; const m = c.misafirEkle('Deniz'); assert.ok(/^M-\d\d$/.test(m.kod));
 const ye = c.yeniEtkinlik(); assert.strictEqual(c.durum, DURUM.BOSTA); assert.strictEqual(Object.keys(c.players).length, 0); assert.strictEqual(c.ogrenciler.length, rosterOnce + 1, 'roster kalır');

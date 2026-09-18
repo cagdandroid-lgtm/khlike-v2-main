@@ -5,7 +5,8 @@
     var el = UI.el, yap = UI.yap, bosalt = UI.bosalt;
     var ctx = null, liste = [];
 
-    var GRUP_AD = { p: 'P', e: 'E', i: 'İ', c: 'C' };
+    var GRUP_AD = { p: 'P', e: 'E', u: 'U' };
+    var ESKI_GRUP = { i: 'u', c: 'u' };   // İ ve C grupları U'da birleşti
 
     function kur(c) {
         ctx = c;
@@ -24,7 +25,7 @@
         var grup = el('r-grup').value, aktif = el('r-aktif').value;
         var govde = bosalt(el('r-govde'));
         var suz = liste.filter(function (o) {
-            if (grup && (o.grup || '') !== grup) return false;
+            if (grup && (ESKI_GRUP[o.grup] || o.grup || '') !== grup) return false;
             if (aktif === '1' && o.aktif === false) return false;
             if (aktif === '0' && o.aktif !== false) return false;
             if (ara && o.isim.toLocaleLowerCase('tr').indexOf(ara) === -1 && o.kod.toLowerCase().indexOf(ara) === -1) return false;
@@ -39,8 +40,8 @@
             isimKutu.onchange = function () { ctx.gonder('roster_guncelle', { kod: o.kod, isim: isimKutu.value }); };
 
             var grupSec = yap('select', { 'aria-label': o.kod + ' grubu' });
-            ['p', 'e', 'i', 'c'].forEach(function (x) { grupSec.appendChild(yap('option', { value: x, metin: GRUP_AD[x] })); });
-            grupSec.value = o.grup || 'e';
+            ['p', 'e', 'u'].forEach(function (x) { grupSec.appendChild(yap('option', { value: x, metin: GRUP_AD[x] })); });
+            grupSec.value = ESKI_GRUP[o.grup] || o.grup || 'e';
             grupSec.onchange = function () { ctx.gonder('roster_guncelle', { kod: o.kod, grup: grupSec.value }); };
 
             var pasif = o.aktif === false;

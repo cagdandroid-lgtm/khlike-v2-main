@@ -60,7 +60,7 @@ BOSTA ──set_sec──▶ LOBI ──oyunu_baslat──▶ SORUDA ⇄ SORU_AR
 ### Grup = setin grubu
 
 Panelde **elle grup seçici yoktur.** Oturumun grubu daima seçili setin `grup` alanından gelir
-ve üst şeritte rozet olarak görünür (🌱 E Grubu / 🚀 İ Grubu …). Grubu değiştirmenin yolu
+ve üst şeritte rozet olarak görünür (🌱 E Grubu / 🦉 U Grubu …). Grubu değiştirmenin yolu
 başka bir set açmaktır. *Karma oturum* açılırsa rozet 🎲 Karma olur ve öğrenci giriş ekranında
 kendi grubunu seçer.
 
@@ -209,7 +209,7 @@ Yalnız içerik yönetimi; **buradan oyun başlatılamaz.**
 
 * **📤 Set dosyası yükle** — bir `.json` set dosyası seçin. Sunucuda doğrulanır; geçerse
   kaydedilir ve hem listeye hem Canlı Oyun set seçicisine anında düşer. Geçersizse hata
-  gerekçesi (ör. *"grup p/e/i/c olmalı · sorular boş"*) gösterilir ve dosya kaydedilmez.
+  gerekçesi (ör. *"grup p/e/u olmalı · sorular boş"*) gösterilir ve dosya kaydedilmez.
   **Dosya adı set kimliği olur** (`orman_patikasi_e.json` → `orman_patikasi_e`).
 * **Set listesi** — ad, dosya adı, grup, hafta, soru sayısı, tema.
 * **👁️ Önizle** — setin tüm sorularını salt-okunur gösterir: kategori/zorluk/CHC/süre etiketleri,
@@ -289,7 +289,7 @@ kaydedilebilir; kayıtta doğrulanır.
 ```jsonc
 {
   "ad": "E Grubu Tanılama Yarışması",   // zorunlu
-  "grup": "e",                          // zorunlu — p | e | i | c
+  "grup": "e",                          // zorunlu — p | e | u (eski i/c → u sayılır)
   "hafta": 1,                           // isteğe bağlı, panelde sıralama için
   "tema": {                             // öğrenciye "oyunun adı" bu tema adıdır
     "ad": "Orman Patikası",
@@ -331,6 +331,13 @@ sürekliliği buna bağlıdır). Ayrılan öğrenci silinmez, `aktif: false` yap
 { "guncelleme": "2026-09-01",
   "ogrenciler": [ { "kod": "E-01", "isim": "Ahmet", "grup": "e", "aktif": true } ] }
 ```
+
+**Gruplar:** `p` (🐣 P Grubu), `e` (🌱 E Grubu), `u` (🦉 U Grubu). İ ve C grupları 2026-09-18'de
+**U Grubu**nda birleşti. Geriye dönük uyumluluk: set veya öğrenci dosyasında kalan eski `"i"` /
+`"c"` değerleri sunucuda otomatik `"u"` sayılır (`lib/gruplar.js`).
+Birleşmede kodlar yeniden numaralandı: grup harfinden sonraki **tek** sayılar kız, **çift** sayılar
+erkek öğrencileri gösterir (U-01, U-03… / U-02, U-04…). Eski kod (I-04, C-12 …) her kayıtta
+`eski_kod` alanında saklanır; birleşme öncesi CSV'ler bu alanla eşlenir. Listeyi İndir bu alanı korur.
 
 Panel → **Öğrenci Listesi** bölümünden ekleme/düzenleme/pasifleştirme yapılır (o oturumda
 anında geçerli). Kalıcı olması için **Listeyi İndir** → depodaki `data/ogrenciler.json`
