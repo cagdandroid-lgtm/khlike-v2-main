@@ -21,13 +21,6 @@
       "aktif": true
     },
     {
-      "kod": "U-01",
-      "isim": "Eylül Ç.",
-      "grup": "u",
-      "aktif": true,
-      "eski_kod": "I-01"
-    },
-    {
       "kod": "U-02",
       "isim": "Hasan Hüseyin",
       "grup": "u",
@@ -119,13 +112,6 @@
       "aktif": true
     },
     {
-      "kod": "U-06",
-      "isim": "Ege",
-      "grup": "u",
-      "aktif": true,
-      "eski_kod": "I-06"
-    },
-    {
       "kod": "U-08",
       "isim": "Güney",
       "grup": "u",
@@ -202,13 +188,7 @@
       "aktif": true,
       "eski_kod": "C-14"
     },
-    {
-      "kod": "U-36",
-      "isim": "Tuğşah",
-      "grup": "u",
-      "aktif": true,
-      "eski_kod": "C-16"
-    },
+
     {
       "kod": "U-38",
       "isim": "Rüzgar",
@@ -228,6 +208,13 @@
       "grup": "u",
       "aktif": true,
       "eski_kod": "C-20"
+    },
+    {
+      "kod": "U-42",
+      "isim": "Y. Affan",
+      "grup": "u",
+      "aktif": true,
+      "eski_kod": "C-22"
     }
   ]
 }
