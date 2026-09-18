@@ -223,8 +223,10 @@ Aşağıdaki standartlara İSTİSNASIZ uy:
   bilgi/akıl yürütme) · Gsm (kısa süreli/çalışma belleği) · Gs (işlem
   hızı) · Gc (kristalize/sözel bilgi) · Glr (uzun süreli bellekten
   geri getirme).
-- data dosyalarındaki her görev/seviye "chc" alanıyla etiketlenir
-  (ör. "chc": ["Gf","Gs"]). CHC bilgisi panelde AÇIKTA DURMAZ; yalnız
+- data dosyalarındaki her görev/seviye "chc" alanıyla etiketlenir; etiket
+  DAR YETENEK kodudur (Gf-I tümevarım, Gf-RG ardışık akıl yürütme, Gf-RQ
+  nicel, Gv-Vz görselleştirme, Gv-SR uzamsal ilişkiler, Gsm-WM çalışma
+  belleği, Gs-P algısal hız, Glr geri getirme), ör. "chc": ["Gf-I","Gsm-WM"]. CHC bilgisi panelde AÇIKTA DURMAZ; yalnız
   "Etkinlik Bilgisi" modalinin CHC sekmesinde yer alır (aşağıdaki
   Etkinlik bilgi modali bölümüne bak).
 - CHC etiketleri ÖĞRENCİ ekranında hiçbir yerde gösterilmez (zorluk
@@ -294,6 +296,65 @@ Aşağıdaki standartlara İSTİSNASIZ uy:
   rol paylaşımı) sonradan puanlanabilmesi. Hangi projelerin araştırma
   oyunu olduğu bilinçli seçilir; her oyuna yayılmaz.
 
+## Oyun formatları kataloğu (KHLike v2 mod katmanı)
+- Soru motoru, kayıt ve ölçme her formatta AYNIDIR; format yalnız üstteki
+  "meta oyun"u değiştirir ve kayda mod alanı olarak formatın adı yazılır
+  (yarış, boss, fetih, kalkan_roket, donen_duello, halat, kule_savunma,
+  pist, kule_insa).
+- Fetih: sahnede 6×6 harita; her doğru cevap bir kare fethettirir, hızlı
+  olan komşu rakip karesini de alabilir; en çok toprak kazanır (bireysel
+  veya iki takım). Kalkan & Roket: her doğru cevapta rastgele eşya düşer
+  (🛡️ kalkan, 🚀 roket: hedeften puan çalar, 🔍 ipucu: bir yanlış şıkkı
+  eler ve ipucu_kullanildi=1 kaydedilir, ⚡ çift puan); eşyalar soru arası
+  sahnesinde oynanır. Dönen Düello: her soruda herkes yeni bir rakiple
+  eşleşir, kazanan bonus alır; elenme yok. Halat Çekme: iki takım, doğru
+  cevap farkı halatı çeker. Kule Savunması: iki takım, doğru cevapla rakip
+  kuleye vur veya kendi kuleni onar (karar öğrencide). Pist Yarışı: doğru
+  = ilerle, seri = turbo. Kule İnşa: doğru = blok, yanlış = sallanır ama
+  düşmez (P/E için sakin format). Boss: yukarıda tanımlı.
+- Değişmez kurallar: (1) Hiçbir saldırı/eşya cevaplamayı ENGELLEMEZ
+  (dondurma, susturma, şık gizleme yok) — adalet ve süre verisi için.
+  (2) Elenme yok; herkes son soruya kadar oynar. (3) Roket/saldırı yalnız
+  sıralamada KENDİNDEN YUKARIDAKİNE yapılabilir. (4) Aynı format aynı
+  grupta yılda en fazla 3-4 kez; format seçimi panelden, set seçiminden
+  bağımsız.
+
+## Oturum yaşam döngüsü (TÜM OYUNLARDA ORTAK)
+- Durum makinesi: BOŞTA → LOBİ → OYUN ⇄ ARA → SONUÇ. Grup/etkinlik seçimi
+  yalnız BOŞTA ve LOBİ'de yapılabilir; oyun başlayınca kilitlenir.
+- Panelin üst şeridinde HER durumda görünen kırmızı "Etkinliği Bitir"
+  düğmesi bulunur (onaylı). Basılınca oturum BOŞTA'ya döner, öğrenci
+  cihazları bekleme ekranına düşer. Grup/set değiştirmenin tek yolu budur.
+- Kimlik yaşam döngüsü: öğretmen bir öğrenciyi çıkardığında veya ismini
+  serbest bıraktığında o cihazdaki kayıtlı isim SİLİNİR, oyun görünümü
+  kapanır, isim seçme ekranı açılır. Sayfa yenilemede aynı isimle dönüş ve
+  puan/ilerleme koruması sürer. Aynı cihaz, oyun başlamadan veya hiç cevap
+  vermemişken farklı isim seçebilir (yanlış isim düzeltme akışı).
+- Ders etiketi: oturum açılırken öğretmen serbest bir etiket girer
+  ("2. Ders · 12 Eylül"); kayıtlara ve karne/rapor başlığına yazılır.
+
+## İlerleme ve geçiş (TÜM OYUNLARDA ORTAK)
+- İlerleme modu: "Senkron" (herkes aynı soruda) veya "Bireysel" (herkes
+  kendi hızında; bitiren beklemez, sıradakine geçer, hiçbir öğrenci
+  bekleme ekranında kalmaz).
+- Geçiş kontrolü: senkron modda sıradaki soruya geçiş "Otomatik" veya
+  "Öğretmen onaylı" olur.
+- Soru atlama: senkron modda öğretmen önceki/sonraki soruya geçebilir ve
+  belirli bir soruya atlayabilir; bireysel ve merdivenli (uyarlanabilir)
+  modlarda bu kontrol GİZLENİR.
+- Bireysel modda puanlama: doğru cevap 500 + sorunun hedef süresine göre
+  azalan hız bonusu (en fazla 500) + ilk denemede doğruysa 100. Sıralama
+  kişiler arası hıza göre değil bu puana göredir ve listede "kaçıncı
+  soruda" bilgisi de gösterilir. Kapanışta iki rozet: "En Yüksek Puan" ve
+  "En İsabetli".
+
+## Oyun mekaniği denetimi (yeni mekanik eklemeden ÖNCE)
+Her mekanik şu üç soruyu geçmelidir: (1) tahminle/şık deneyerek
+geçilebiliyor mu, (2) rastgele oynanınca da ilerliyor mu, (3) oyuncuyu
+kilitleyen veya cevabı sızdıran bir durum var mı. Geçemeyen mekanik
+tasarlanmaz. Tahmin uzayı küçükse (4 şık) cevap tam eşleştirmeye çevrilir
+ve tek gönderim hakkı verilir.
+
 ## Etkinlik bilgi modali ve veli özeti (TÜM OYUNLARDA ZORUNLU)
 - Öğretmen panelinin sağ üst köşesinde göze batmayan bir "ℹ️ Etkinlik
   Bilgisi" düğmesi bulunur; tıklanınca ÜÇ SEKMELİ bir modal açılır.
@@ -337,7 +398,11 @@ Aşağıdaki standartlara İSTİSNASIZ uy:
 - Sorular, seviyeler, bulmaca tanımları ASLA koda gömülmez; /data altında
   JSON olarak tutulur. JSON şemasını dosya başında yorumla belgele
   (JSON yorum desteklemediği için şemayı README.md'ye yaz).
-- Her içerik dosyasında "grup" alanı bulunur: "e", "i", "c" (gerekirse "p").
+- Her içerik dosyasında "grup" alanı bulunur: "p", "e", "u".
+  (Eylül 2026: İ ve C grupları BİRLEŞTİ → "u" / ekranda "U Grubu". Eski
+  "i" ve "c" değerleri geriye dönük uyumluluk için "u" kabul edilir;
+  öğrenci kodlarının eski-yeni karşılığı data/kod_esleme.json dosyasında
+  tutulur ve asla silinmez.)
   Öğretmen panelinden grup seçilince yalnız o grubun içeriği yüklenir.
 
 ## Arayüz
