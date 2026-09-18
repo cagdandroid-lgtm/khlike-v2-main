@@ -216,6 +216,12 @@
       "aktif": true,
       "eski_kod": "C-18"
     },
+        {
+      "kod": "E-01",
+      "isim": "Eylül",
+      "grup": "e",
+      "aktif": true
+    },
     {
       "kod": "U-40",
       "isim": "Alparslan E.",
