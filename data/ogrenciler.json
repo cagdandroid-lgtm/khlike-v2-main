@@ -1,6 +1,6 @@
 {
   "_aciklama": "UYCEP Logic ortak öğrenci listesi. TÜM oyun depolarında data/ogrenciler.json olarak AYNI dosya bulunur. Kodlar dönem boyunca sabittir ve asla değiştirilmez (araştırma verisinin sürekliliği buna bağlıdır). Ayrılan öğrenci SİLİNMEZ, aktif:false yapılır — eski kayıtları sahipsiz kalmasın. eski_kod alanı yalnız İ+C birleşmesinden (Eylül 2026) gelen öğrencilerde bulunur; yeni öğrencilere yazılmaz. Kod numarasının tek/çift olması cinsiyeti gösterir. Doğum tarihi, iletişim vb. kişisel bilgiler bu dosyaya ASLA yazılmaz.",
-  "guncelleme": "2026-09-18",
+  "guncelleme": "2026-10-26",
   "ogrenciler": [
     {
       "kod": "P-01",
@@ -11,7 +11,7 @@
     {
       "kod": "P-02",
       "isim": "Ali Demir B.",
-      "grup": "p",
+      "grup": "e",
       "aktif": true
     },
     {
@@ -51,6 +51,12 @@
       "aktif": true
     },
     {
+      "kod": "P-09",
+      "isim": "Melis",
+      "grup": "p",
+      "aktif": true
+    },
+    {
       "kod": "P-10",
       "isim": "Aras A.",
       "grup": "p",
@@ -71,12 +77,6 @@
     {
       "kod": "P-16",
       "isim": "Sarp A.",
-      "grup": "p",
-      "aktif": true
-    },
-    {
-      "kod": "P-09",
-      "isim": "Melis",
       "grup": "p",
       "aktif": true
     },
@@ -143,6 +143,18 @@
     {
       "kod": "E-10",
       "isim": "Doruk K.",
+      "grup": "e",
+      "aktif": true
+    },
+    {
+      "kod": "E-12",
+      "isim": "Kutay",
+      "grup": "e",
+      "aktif": true
+    },
+    {
+      "kod": "E-19",
+      "isim": "Melek",
       "grup": "e",
       "aktif": true
     },
